@@ -48,3 +48,17 @@
 .box > p {
   padding: 10px;
 }
+
+/* Custom CSS to limit the maximum width of fluid containers */
+.max-width-custom {
+  max-width: 3000px; /* or any maximum width you prefer */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.faq {
+  //   display: flex;
+  //   align-items: center; /* Aligns vertically */
+  //   justify-content: center; /* Aligns horizontally */
+  margin: 60px auto;
+}

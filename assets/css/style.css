@@ -43,4 +43,15 @@
 
 .box > p {
   padding: 10px;
+}
+
+/* Custom CSS to limit the maximum width of fluid containers */
+.max-width-custom {
+  max-width: 3000px; /* or any maximum width you prefer */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.faq {
+  margin: 60px auto;
 }/*# sourceMappingURL=style.css.map */
