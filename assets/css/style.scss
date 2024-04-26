@@ -1,38 +1,58 @@
 @import "variables";
 
+$font-headings: "Playfair Display", serif;
+$font-body: "Lora", serif;
+
+$dark-green: #0a481e;
+$red: #b22222;
+$gold: #daa520;
+$beige: #f5f5dc;
+$white: #ffffff;
+
+// fonty
+body {
+  font-family: $font-body;
+  font-weight: normal;
+  font-size: 16px; // Případně upravte podle potřeb
+  line-height: 1.6; // Případně upravte podle potřeb
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-headings;
+  font-weight: 700; // Použití tučné varianty pro nadpisy
+}
+
+// barvy
+
+// rules
 .belt {
-  width: 100%;
-  background-color: lightgray;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
+
+  margin-top: 40px;
+  padding: 20px;
 
   .box {
-    display: flex;
-    gap: 10px;
     flex-grow: 1;
-  }
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
 
-  @media (min-width: 599px) {
-    flex-direction: row;
-    justify-content: center;
-
-    .box {
-      padding: 20px;
-      border-left: 2px solid grey; // Apply left border to all .box children
-      min-width: 600px;
-      justify-content: center;
-    }
-  }
-
-  @media (min-width: 1199px) {
-    .box {
-      min-width: 200px; // Ensure this rule is within .belt to maintain specificity
+    .p,
+    h2 {
+      padding: 0;
+      margin: 0;
     }
   }
 }
 
+// misc
 .popis {
   margin: 60px auto;
 }
@@ -42,10 +62,6 @@
 }
 
 .sestaveniImg {
-  padding: 10px;
-}
-
-.box > p {
   padding: 10px;
 }
 
@@ -61,4 +77,8 @@
   //   align-items: center; /* Aligns vertically */
   //   justify-content: center; /* Aligns horizontally */
   margin: 60px auto;
+}
+
+.row {
+  align-items: center;
 }
