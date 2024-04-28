@@ -43,10 +43,13 @@ h6 {
     align-items: center;
   }
 
+  .btn-header {
+    background-color: $red;
+  }
+
   span {
     display: flex;
     align-items: center;
-    gap: 5px;
 
     h3 {
       color: black;
@@ -314,4 +317,9 @@ $light-off-opacity: 0.4;
     box-shadow: 0px $globe-height/6 $globe-width * 2 $globe-spread
       rgba(247, 0, 148, 0.2);
   }
+}
+
+body {
+  background-image: url(/assets/images/p4.png);
+  background-repeat: repeat;
 }
