@@ -1,0 +1,79 @@
+<section>
+      <div class="jumbotron py-5 jumbotron-fluid">
+        <div class="video-background">
+          <video
+            autoplay
+            muted
+            loop
+            poster="https://dummyimage.com/900x400/000/fff"
+          >
+            <source
+              src="/assets/mov/5754895-sd_960_540_25fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="container text-white">
+          <div class="vertical-divider d-none d-md-block"></div>
+          <div>
+            <h1>
+              <span class="animated">Objevte krásu 3D Stromů</span>
+            </h1>
+            <p class="lead">
+              Ponořte se do zázračné atmosféry Vánoc s našimi exkluzivními
+              umělými stromky. Každý strom je pečlivě navržen s ohledem na
+              nejvyšší standardy kvality, aby vaše svátky byly naplněny září a
+              pohodou.
+            </p>
+            <p>
+              S našimi stromky zažijete Vánoce plné magie a elegance, která
+              zůstane ve vašem domově navždy.
+            </p>
+            <a class="btn button-38" href="#" role="button">Zjistit více ↪</a>
+          </div>
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.jumbotron -->
+    </section>
+
+    jumbotron {
+  display: flex;
+  align-items: center; // To vertically align the container to the center
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  height: 100vh; // Set to full viewport height
+}
+
+.jumbotron video {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.jumbotron .container {
+  display: flex; // Use flexbox for inner container layout
+  width: 100%; // Full width to utilize space next to the divider
+  z-index: 2;
+  position: relative;
+  color: white;
+  text-shadow: 1px 1px 2px black; // Shadow for better text visibility
+}
+
+.jumbotron .vertical-divider {
+  border-left: 1px solid #fff; // White vertical divider
+  margin-right: 20px; // Spacing from the divider to the text
+  padding-left: 20px; // Optional padding for visual spacing inside the text container
+}
+
+@media (max-width: 768px) {
+  .jumbotron .vertical-divider {
+    display: none; // Hide divider on small screens
+  }
+}

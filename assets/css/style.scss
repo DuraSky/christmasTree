@@ -1,6 +1,7 @@
 @import "variables";
 
-$font-headings: "Playfair Display", serif;
+// $font-headings: "Playfair Display", serif;
+$font-headings: "Cinzel", serif;
 $font-body: "Lora", serif;
 
 // $font-headings: "Sancreek", serif;
@@ -11,10 +12,14 @@ $white: #faf8f8;
 
 // Christmas Palette
 $lightRed: #f5624d;
-$darkRed: #d32f2f;
+$darkRed: #d32320;
 $lightGreen: #34a65f;
 $darkGreen: #0f8a5f;
 $blue: #235e6f;
+
+$pistachio: #e4f1e8;
+
+// $pistachio: #c1e5cc;
 
 // fonty
 body {
@@ -38,16 +43,23 @@ h6 {
 }
 
 .topbar {
-  background-color: #d32f2f;
+  background-color: $white;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  z-index: 10;
 }
 
 .navbar {
+  z-index: -1;
+
   .row {
     align-items: center;
   }
 
   span {
     display: flex;
+    padding: 20px;
+
     align-items: center;
     color: black;
 
@@ -57,77 +69,40 @@ h6 {
   }
 }
 
-// .nav-item {
-//   i {
-//     color: $darkGreen;
-//   }
+// .navbar-nav {
+//   background-color: $white;
+//   gap: 10px;
+//   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+//     rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+//   margin-bottom: 10px;
+//   padding: 10px;
 // }
 
+// .navbar-nav {
+//   flex-grow: 1;
+// }
+
+.settingNav {
+  display: flex;
+}
+
 nav {
-  background-color: $white;
+  background-color: $pistachio;
   // background-color: $gold;
   text-transform: uppercase;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  // box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+  //   rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
-.hero {
-  margin: 40px auto;
-  // background-color: rgba(226, 234, 230, 0.218);
-  overflow: hidden;
-
-  .btnHero {
-    background-color: $lightGreen;
-  }
-
-  .imgHero {
-    content: "";
-    width: 600px;
-    // height: 571px;
-    background-size: cover;
-    position: absolute;
-    // top: -150px;
-    top: 80px;
-
-    z-index: -1;
-  }
-
-  // .heroContent {
-  //   background: rgba(226, 234, 230, 0.15);
-  //   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  //   backdrop-filter: blur(3.5px);
-  //   -webkit-backdrop-filter: blur(3.5px);
-  //   border-radius: 10px;
-  // }
-
-  .heroContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    a {
-      color: $lightGreen;
-      font-weight: bold;
-      text-decoration: none;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .imgHero {
-      display: none;
-    }
-    .heroContent {
-      background: none;
-      border-radius: 0;
-      box-shadow: none;
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-    }
-  }
+.jumbotron {
+  background-color: $pistachio;
 }
-
 .underHero {
   margin: 40px auto;
+}
+
+.heroHeader {
+  font-size: 4rem;
 }
 
 // rules
@@ -159,7 +134,7 @@ nav {
 }
 
 .popis {
-  margin-top: 40px;
+  padding-top: 40px;
 }
 
 .separator {
@@ -182,10 +157,6 @@ nav {
   }
 }
 
-.sestaveni {
-  // background-color: $platinum;
-}
-
 footer {
   // background-color: $platinum;
   a {
@@ -205,134 +176,14 @@ footer {
   margin-left: auto;
 }
 
-// /* CSS */
-// .button-38 {
-//   background-color: $darkGreen;
-//   border: 0;
-//   border-radius: 0.5rem;
-//   box-sizing: border-box;
-//   color: white;
-//   // color: $green;
-//   font-size: 0.875rem;
-//   font-weight: 600;
-//   line-height: 1.25rem;
-//   padding: 0.75rem 1rem;
-//   text-align: center;
-//   text-decoration: none #d1d5db solid;
-//   text-decoration-thickness: auto;
-//   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-//   cursor: pointer;
-//   user-select: none;
-//   -webkit-user-select: none;
-//   touch-action: manipulation;
-// }
-
-// .button-38:hover {
-//   background-color: rgb(249, 250, 251);
-// }
-
-// .button-38:focus {
-//   outline: 2px solid transparent;
-//   outline-offset: 2px;
-// }
-
-// .button-38:focus-visible {
-//   box-shadow: none;
-// }
-
-.jumbotron {
-  display: flex;
-  align-items: center; // To vertically align the container to the center
-  position: relative;
-  overflow: hidden;
-  background-color: black;
-  height: 100vh; // Set to full viewport height
-}
-
-.jumbotron video {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3;
-}
-
-.jumbotron .container {
-  display: flex; // Use flexbox for inner container layout
-  width: 100%; // Full width to utilize space next to the divider
-  z-index: 2;
-  position: relative;
-  color: white;
-  text-shadow: 1px 1px 2px black; // Shadow for better text visibility
-}
-
-.jumbotron .vertical-divider {
-  border-left: 1px solid #fff; // White vertical divider
-  margin-right: 20px; // Spacing from the divider to the text
-  padding-left: 20px; // Optional padding for visual spacing inside the text container
-}
-
-@media (max-width: 768px) {
-  .jumbotron .vertical-divider {
-    display: none; // Hide divider on small screens
-  }
-}
-
-.animated {
-  font-size: 2.5em;
-  letter-spacing: 0;
-
-  text-shadow: 0 0 80px rgb(5, 5, 5);
-
-  /* Clip Background Image */
-
-  background: url("/assets/images/textAnimation.png") repeat-y;
-  -webkit-background-clip: text;
-
-  background-clip: text;
-
-  /* Animate Background Image */
-
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: aitf 80s linear infinite;
-  animation: aitf 80s linear infinite;
-
-  /* Activate hardware acceleration for smoother animations */
-
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-@-webkit-keyframes aitf {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-@keyframes aitf {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
 .btn {
   text-decoration: none;
   border: 1px solid #0f8a5f; // Updated to new color
   position: relative;
   overflow: hidden;
   color: white; // Ensures the text color is white
-  background-color: transparent; // Makes the background transparent
+  // background-color: transparent; // Makes the background transparent
+  background-color: $darkGreen;
   padding: 0.75rem 1.5rem; // Standard Bootstrap padding for buttons
   font-size: 1rem; // Standard Bootstrap font size for buttons
   transition: background-color 0.3s, color 0.3s; // Smooth transition for hover effects
@@ -363,4 +214,66 @@ footer {
   &:hover::before {
     left: 100%; // Ensures the gradient slides across the button on hover
   }
+}
+.content {
+  position: relative; // Ensures proper positioning within the content
+
+  .text-block {
+    position: relative; // Needed for positioning the divider correctly
+    padding-left: 20px; // Adds space for the divider and some margin
+
+    .vertical-divider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0; // Align to the left inside the text block
+      width: 4px; // Increased thickness of the divider
+      background-color: #0f8a5f; // The specified dark teal color
+      margin-left: -15px; // Adjusts the position to the left outside the text block
+    }
+  }
+}
+
+// Ensure responsiveness
+@media (max-width: 991px) {
+  .vertical-divider {
+    display: none; // Hide on smaller screens
+  }
+}
+
+// Animace onload
+
+/* Initial state of the elements */
+.hero .text-block {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero .vertical-divider {
+  height: 0;
+  transition: height 0.7s ease-out 0.7s; /* Delaying the start of the animation */
+}
+
+/* Animated state */
+.hero .text-block.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero .vertical-divider.active {
+  height: 350px; /* Adjust height according to your design */
+}
+
+/* Initial state of the button */
+.hero .button-38 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s; /* Adding delay to synchronize with text */
+}
+
+/* Animated state */
+.hero .button-38.active {
+  opacity: 1;
+  transform: translateY(0);
 }
