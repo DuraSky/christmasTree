@@ -13,3 +13,10 @@ https://codepen.io/krzy-ro-sza/pen/xxXrwvO
 
 https://codepen.io/kwhytock/pen/wPEoXo
 //hrs
+
+
+https://codepen.io/khone-vongsouthi/pen/NbLqeo
+//animated jumbotron
+
+https://codepen.io/rachsmith/pen/BNKJme
+//menici text

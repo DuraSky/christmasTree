@@ -118,46 +118,51 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <!-- <img src="/assets/images/hero-scribble2.svg" class="imgHero img-fluid" alt="" srcset=""> -->
-      <!-- <img src="/assets/images/branchBcg (copy).webp" class="imgHero img-fluid " alt="" srcset=""> -->
-      <img
-        src="/assets/images/3d-vetvicka-realistic.webp"
-        class="img-fluid imgHero"
-        alt=""
-        srcset=""
-      />
-      <div class="container">
-        <div class="row">
-          <!-- Adjust the column sizes across different screen sizes -->
-          <div class="col-lg-8 col-12 mx-auto mb-3 heroContent">
-            <h1>Objevte krásu 3D Vánočních stromků</h1>
-            <hr id="hr2" />
-
-            <p>
+    <section>
+      <div class="jumbotron py-5 jumbotron-fluid">
+        <div class="video-background">
+          <video
+            autoplay
+            muted
+            loop
+            poster="https://dummyimage.com/900x400/000/fff"
+          >
+            <source
+              src="/assets/mov/5754895-sd_960_540_25fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="container text-white">
+          <div class="vertical-divider d-none d-md-block"></div>
+          <div>
+            <h1>
+              <span class="animated">Objevte krásu 3D Stromů</span>
+            </h1>
+            <p class="lead">
               Ponořte se do zázračné atmosféry Vánoc s našimi exkluzivními
               umělými stromky. Každý strom je pečlivě navržen s ohledem na
               nejvyšší standardy kvality, aby vaše svátky byly naplněny září a
-              pohodou. S našimi stromky zažijete Vánoce plné magie a elegance,
-              která zůstane ve vašem domově navždy.
-              <a href="#" class="btn-link">
-                Zjistěte více <i class="bi bi-arrow-right"></i>
-              </a>
+              pohodou.
             </p>
-
-            <!-- <p>
-                  Realistické umělé vánoční stromky 3D přinášejí do vašeho domova autentickou vánoční atmosféru. Tyto stromky jsou vyrobeny z odolného materiálu zvaného PE (polyethylene), který se používá pro výrobu větviček, jež neopadávají a působí velmi přirozeně, jsou označováný jako 3D.
-                Na první pohled nebudete schopni rozeznat, že se jedná o umělý vánoční stromeček. 
-                </p> -->
-            <div class="btn button-38">
-              Kup teď <i class="bi bi-tree-fill"></i>
-            </div>
+            <p>
+              S našimi stromky zažijete Vánoce plné magie a elegance, která
+              zůstane ve vašem domově navždy.
+            </p>
+            <a class="btn button-38" href="#" role="button">Zjistit více ↪</a>
           </div>
-          <!-- Image on the right with responsive handling -->
-          <!-- <div class="col-lg-4  col-12">
-                <img src="/assets/images/mid-placeholder.jpg" class="img-fluid" alt="Vánoční stromek">
-            </div> -->
         </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.jumbotron -->
+    </section>
+
+    <!-- popis stromku -->
+    <section>
+      <div class="container popis text-center">
+        <h1 class="text-center">Jak strom vypadá?</h1>
+        <img src="/assets/images/tree.webp" alt="" class="img-fluid" />
+        <!-- <img src="/assets/images/tree_family.webp" alt=""> -->
       </div>
     </section>
 
@@ -233,17 +238,6 @@
             <p class="card-text">Vyrobeno z nehořlavých materiálů.</p>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- <div class="scallop-down"></div> -->
-
-    <!-- popis stromku -->
-    <section>
-      <div class="container popis text-center">
-        <h1 class="text-center">Jak strom vypadá?</h1>
-
-        <img src="/assets/images/tree.webp" alt="" class="img-fluid" />
-        <!-- <img src="/assets/images/tree_family.webp" alt=""> -->
       </div>
     </section>
 
@@ -402,8 +396,6 @@
       </div>
     </div>
 
-    <div class="scallop-up"></div>
-
     <!-- sestaveni -->
     <section class="max-width-custom">
       <div class="container-fluid text-center sestaveni">
@@ -461,7 +453,9 @@
             </p>
           </div>
           <div class="col-12">
-            <button type="button" class="btn btn-secondary">Koupit nyní</button>
+            <div class="btn button-38">
+              Kup teď <i class="bi bi-tree-fill"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -476,25 +470,21 @@
           <div class="col-md-6 mb-3 mb-md-0">
             <h5>3D Vanocni Stromky</h5>
             <ul class="list-unstyled">
-              <li><a href="#" class="text-light">Proc Umely strom</a></li>
-              <li><a href="#" class="text-light">Vyhody</a></li>
-              <li><a href="#" class="text-light">Popis</a></li>
+              <li><a href="#">Proc Umely strom</a></li>
+              <li><a href="#">Vyhody</a></li>
+              <li><a href="#">Popis</a></li>
             </ul>
           </div>
 
           <div class="col-md-3">
             <h5>Follow Us</h5>
             <div>
-              <a href="#" class="text-light me-2"
-                ><i class="bi bi-facebook"></i
-              ></a>
-              <a href="#" class="text-light me-2"
-                ><i class="bi bi-instagram"></i
-              ></a>
+              <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
             </div>
           </div>
         </div>
-        <div class="text-center pt-3 border-top border-light">
+        <div class="text-center pt-3 border-top border-dark">
           <p class="mb-0">© 2023 3D Vanocni Stromky</p>
         </div>
       </div>
