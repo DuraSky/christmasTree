@@ -1,1 +1,239 @@
-body{background-color:#faf8f8;font-family:"Lora",serif;font-weight:normal;font-size:16px;line-height:1.6}h1,h2,h3,h4,h5,h6{color:#0f8a5f;font-family:"Cinzel",serif}.topbar{background-color:#faf8f8;box-shadow:rgba(67,71,85,.27) 0px 0px .25em,rgba(90,125,188,.05) 0px .25em 1em;z-index:10}.navbar{z-index:-1}.navbar .row{align-items:center}.navbar span{display:flex;padding:20px;align-items:center;color:#000}.navbar span h3{color:#000}.settingNav{display:flex}nav{background-color:#e4f1e8;text-transform:uppercase}.jumbotron{background-color:#e4f1e8}.underHero{margin:40px auto}.heroHeader{font-size:4rem}.belt{display:flex;flex-wrap:wrap;gap:20px;width:100%;flex-grow:1;justify-content:center;padding:40px}.belt h2{color:#d32320;display:flex;flex-direction:column;gap:10px;text-shadow:1px 1px 2px rgba(0,0,0,.7)}.belt p{padding-top:20px}.popis{padding-top:40px}.separator{transform:rotate(180deg)}.faq{margin:60px auto}.faq .row{align-items:center}.faq .closeup{border-radius:15px}.faq .accordion-button{background-color:#faf8f8}footer a{color:#000;text-decoration:none}footer p{color:#000}.max-width-custom{max-width:3000px;margin-right:auto;margin-left:auto}.btn{text-decoration:none;border:1px solid #0f8a5f;position:relative;overflow:hidden;color:#fff;background-color:#0f8a5f;padding:.75rem 1.5rem;font-size:1rem;transition:background-color .3s,color .3s}.btn:hover{color:#fff;background-color:rgba(15,138,95,.4);box-shadow:1px 1px 25px 10px rgba(15,138,95,.4)}.btn::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(120deg, transparent, rgba(15, 138, 95, 0.4), transparent);transition:all 650ms}.btn:hover::before{left:100%}.content{position:relative}.content .text-block{position:relative;padding-left:20px}.content .text-block .vertical-divider{position:absolute;top:0;bottom:0;left:0;width:4px;background-color:#0f8a5f;margin-left:-15px}@media(max-width: 991px){.vertical-divider{display:none}}.hero .text-block{opacity:0;transform:translateY(20px);transition:opacity .8s ease-out,transform .8s ease-out}.hero .vertical-divider{height:0;transition:height .7s ease-out .7s}.hero .text-block.active{opacity:1;transform:translateY(0)}.hero .vertical-divider.active{height:350px}.hero .button-38{opacity:0;transform:translateY(20px);transition:opacity .8s ease-out .8s,transform .8s ease-out .8s}.hero .button-38.active{opacity:1;transform:translateY(0)}/*# sourceMappingURL=style.css.map */
+body {
+  background-color: #faf8f8;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #faf8f8;
+  font-family: "Cinzel", serif;
+}
+
+.navbar .row {
+  align-items: center;
+}
+.navbar span {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  color: black;
+}
+.navbar span h3 {
+  color: black;
+}
+
+.navigationCustom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure the container is full-width */
+}
+
+.navbar-nav {
+  position: relative;
+  gap: 25px;
+  width: 80vw;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.border-animation {
+  width: 0; /* Start with zero width */
+  height: 1px; /* Border height */
+  background-color: #faf8f8; /* Border color */
+  transition: width 1s ease-out; /* Transition for animation */
+}
+
+.settingNav {
+  display: flex;
+}
+
+nav {
+  background: rgb(122, 182, 144);
+  background: radial-gradient(circle, rgb(122, 182, 144) 75%, rgb(150, 202, 153) 98%);
+  text-transform: uppercase;
+}
+
+.nav-link {
+  color: #faf8f8;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.jumbotron {
+  background: rgb(122, 182, 144);
+  background: radial-gradient(circle, rgb(122, 182, 144) 75%, rgb(150, 202, 153) 98%);
+}
+
+.underHero {
+  margin: 40px auto;
+}
+
+.heroHeader {
+  font-weight: 600;
+  font-size: 4rem;
+  letter-spacing: 0.05em;
+}
+
+.belt {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 40px;
+}
+.belt h2 {
+  color: #d32320;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+.belt p {
+  padding-top: 20px;
+}
+
+.popis {
+  padding-top: 40px;
+}
+
+.separator {
+  transform: rotate(180deg);
+}
+
+.faq {
+  margin: 60px auto;
+}
+.faq .row {
+  align-items: center;
+}
+.faq .closeup {
+  border-radius: 15px;
+}
+.faq .accordion-button {
+  background-color: #faf8f8;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+footer p {
+  color: black;
+}
+
+/* Custom CSS to limit the maximum width of fluid containers */
+.max-width-custom {
+  max-width: 3000px; /* or any maximum width you prefer */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn {
+  text-decoration: none;
+  border: 1px solid #0f8a5f;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background-color: #0f8a5f;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn:hover {
+  color: #fff;
+  background-color: rgba(15, 138, 95, 0.4);
+  box-shadow: 1px 1px 25px 10px rgba(15, 138, 95, 0.4);
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(15, 138, 95, 0.4), transparent);
+  transition: all 650ms;
+}
+.btn:hover::before {
+  left: 100%;
+}
+
+.content {
+  position: relative;
+}
+.content .text-block {
+  position: relative;
+  padding-left: 20px;
+}
+.content .text-block .vertical-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background-color: #0f8a5f;
+  margin-left: -15px;
+}
+
+@media (max-width: 991px) {
+  .vertical-divider {
+    display: none;
+  }
+}
+/* Initial state of the elements */
+.hero .text-block {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero .vertical-divider {
+  height: 0;
+  transition: height 0.7s ease-out 0.7s; /* Delaying the start of the animation */
+}
+
+/* Animated state */
+.hero .text-block.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero .vertical-divider.active {
+  height: 350px; /* Adjust height according to your design */
+}
+
+/* Initial state of the button */
+.hero .button-38 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s; /* Adding delay to synchronize with text */
+}
+
+/* Animated state */
+.hero .button-38.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.spacer {
+  width: 100%;
+  aspect-ratio: 900/80;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url(/assets/images/spacer.webp);
+}/*# sourceMappingURL=style.css.map */

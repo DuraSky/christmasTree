@@ -2,7 +2,8 @@
 
 // $font-headings: "Playfair Display", serif;
 $font-headings: "Cinzel", serif;
-$font-body: "Lora", serif;
+//$font-body: "Lora", serif;
+$font-body: "Poppins", sans-serif;
 
 // $font-headings: "Sancreek", serif;
 
@@ -19,9 +20,9 @@ $blue: #235e6f;
 
 $pistachio: #e4f1e8;
 
-// $pistachio: #c1e5cc;
+// $pistachio: #7ab690;
+$pistachio: #96ca99;
 
-// fonty
 body {
   background-color: $white;
   font-family: $font-body;
@@ -36,22 +37,13 @@ h3,
 h4,
 h5,
 h6 {
-  color: $darkGreen;
+  color: $white;
 
   font-family: $font-headings;
   // font-weight: 700; // Použití tučné varianty pro nadpisy
 }
 
-.topbar {
-  background-color: $white;
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
-    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-  z-index: 10;
-}
-
 .navbar {
-  z-index: -1;
-
   .row {
     align-items: center;
   }
@@ -69,40 +61,69 @@ h6 {
   }
 }
 
-// .navbar-nav {
-//   background-color: $white;
-//   gap: 10px;
-//   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
-//     rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-//   margin-bottom: 10px;
-//   padding: 10px;
-// }
+.navigationCustom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure the container is full-width */
+}
+.navbar-nav {
+  position: relative;
+  gap: 25px;
+  width: 80vw;
+  justify-content: center;
+  overflow: hidden;
 
-// .navbar-nav {
-//   flex-grow: 1;
-// }
+  padding: 20px;
+}
+
+.border-animation {
+  width: 0; /* Start with zero width */
+  height: 1px; /* Border height */
+  background-color: $white; /* Border color */
+  transition: width 1s ease-out; /* Transition for animation */
+}
 
 .settingNav {
   display: flex;
 }
 
 nav {
-  background-color: $pistachio;
+  // background-color: $pistachio;
+  background: rgb(122, 182, 144);
+  background: radial-gradient(
+    circle,
+    rgba(122, 182, 144, 1) 75%,
+    rgba(150, 202, 153, 1) 98%
+  );
   // background-color: $gold;
   text-transform: uppercase;
   // box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
   //   rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
-
+.nav-link {
+  color: $white;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
 .jumbotron {
-  background-color: $pistachio;
+  // background-color: $pistachio;
+  background: rgb(122, 182, 144);
+  background: radial-gradient(
+    circle,
+    rgba(122, 182, 144, 1) 75%,
+    rgba(150, 202, 153, 1) 98%
+  );
 }
 .underHero {
   margin: 40px auto;
 }
 
 .heroHeader {
+  font-weight: 600;
   font-size: 4rem;
+  letter-spacing: .05em;
 }
 
 // rules
@@ -276,4 +297,15 @@ footer {
 .hero .button-38.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+.spacer {
+  width: 100%;
+  aspect-ratio: 900/80;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url(/assets/images/spacer.webp);
 }

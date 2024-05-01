@@ -13,6 +13,10 @@
     />
 
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sancreek&display=swap"
       rel="stylesheet"
     />
@@ -37,42 +41,21 @@
   </head>
   <body>
     <header>
-      <!-- Top Bar -->
-      <div class="py-1 d-none d-lg-block topbar">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-4">
-              <p class="m-0">
-                <i class="bi bi-truck"></i> Bezplatné doručení nad 5000 Kč
-              </p>
-            </div>
-            <div class="col-lg-4 text-center">
-              <p class="m-0">
-                <i class="bi bi-gift-fill"></i> Speciální nabídky pro první
-                nákup
-              </p>
-            </div>
-            <div class="col-lg-4 text-md-end">
-              <p class="m-0">
-                <i class="bi bi-telephone-fill"></i> Zavolejte nám: +420 123 456
-                789
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- navbar -->
       <nav class="navbar navbar-expand-md">
-        <div class="container">
-          <!-- <div class="container-fluid"> -->
+        <div class="container navigationCustom">
           <!-- navbar brand / title -->
-          <a class="navbar-brand" href="#intro ">
-            <span class="fw-bold">
-              <i class="bi bi-tree"></i>
-              <h3>3D Vánoční Stromky</h3>
-            </span>
+          <a class="navbar-brand" href="#intro">
+            <img
+              src="/assets/images/logoWhite.webp"
+              width="150px"
+              alt=""
+              srcset=""
+            />
           </a>
+          <div class="border-animation"></div>
+          <!-- Border animation directly below the logo -->
+
           <!-- toggle button for mobile nav -->
           <button
             class="navbar-toggler"
@@ -93,16 +76,10 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#hero"
-                  ><i class="bi bi-house-fill"></i> Domů</a
-                >
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="#features"
                   ><i class="bi bi-check-circle-fill"></i> Vlastnosti</a
                 >
               </li>
-
               <li class="nav-item">
                 <a class="nav-link" href="#shop"
                   ><i class="bi bi-cart-check-fill"></i> Obchod</a
@@ -120,8 +97,11 @@
               </li>
             </ul>
           </div>
+          <div class="border-animation"></div>
+          <!-- Border animation directly below the navigation items -->
         </div>
       </nav>
+
       <!-- <hr /> -->
     </header>
 
@@ -135,7 +115,7 @@
             <div class="text-block">
               <div class="vertical-divider"></div>
               <!-- Divider now relative to text only -->
-              <h1 class="heroHeader">Objevte krásu 3D Stromů</h1>
+              <h1 class="heroHeader">Stromy jako živé</h1>
               <p class="lead">
                 Ponořte se do zázračné atmosféry Vánoc s našimi exkluzivními
                 umělými stromky. Každý strom je pečlivě navržen s ohledem na
@@ -174,10 +154,19 @@
             src="/assets/images/tree-Photoroom.png-Photoroom.png"
             alt=""
             class="img-fluid ml-md-auto order-md-2"
+            width="600px"
           />
+          <!-- <img
+            src="/assets/images/testing.webp"
+            width="600px"
+            alt=""
+            srcset=""
+          /> -->
         </div>
       </div>
     </section>
+
+    <div class="spacer layer1"></div>
 
     <!-- popis stromku -->
     <section>
@@ -518,5 +507,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/assets/scripts/jumbotron.js"></script>
+    <script src="/assets/scripts/border.js"></script>
   </body>
 </html>
