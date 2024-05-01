@@ -1,11 +1,11 @@
 @import "variables";
 
-// $font-headings: "Playfair Display", serif;
+//$font-headings: "Playfair Display", serif;
 $font-headings: "Cinzel", serif;
 //$font-body: "Lora", serif;
 $font-body: "Poppins", sans-serif;
 
-// $font-headings: "Sancreek", serif;
+//$font-headings: "Sancreek", serif;
 
 // $gold: #d4af37;
 $white: #faf8f8;
@@ -18,10 +18,10 @@ $lightGreen: #34a65f;
 $darkGreen: #0f8a5f;
 $blue: #235e6f;
 
-$pistachio: #e4f1e8;
+// $pistachio: #e4f1e8;
 
 // $pistachio: #7ab690;
-$pistachio: #96ca99;
+// $pistachio: #96ca99;
 
 body {
   background-color: $white;
@@ -43,6 +43,11 @@ h6 {
   // font-weight: 700; // Použití tučné varianty pro nadpisy
 }
 
+header {
+  //border-bottom: 1px solid;
+  color: $white;
+}
+
 .navbar {
   .row {
     align-items: center;
@@ -61,60 +66,37 @@ h6 {
   }
 }
 
-.navigationCustom {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%; /* Ensure the container is full-width */
-}
 .navbar-nav {
-  position: relative;
-  gap: 25px;
-  width: 80vw;
-  justify-content: center;
-  overflow: hidden;
-
-  padding: 20px;
-}
-
-.border-animation {
-  width: 0; /* Start with zero width */
-  height: 1px; /* Border height */
-  background-color: $white; /* Border color */
-  transition: width 1s ease-out; /* Transition for animation */
-}
-
-.settingNav {
-  display: flex;
+  flex-grow: 0.1;
+  opacity: 0.8;
+  justify-content: space-evenly;
+  //border-bottom: solid 3px;
+  // gap: 10px;
 }
 
 nav {
-  // background-color: $pistachio;
-  background: rgb(122, 182, 144);
-  background: radial-gradient(
-    circle,
-    rgba(122, 182, 144, 1) 75%,
-    rgba(150, 202, 153, 1) 98%
-  );
-  // background-color: $gold;
+  background-color: #76ae8b;
+
   text-transform: uppercase;
-  // box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-  //   rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 .nav-link {
   color: $white;
   line-height: 1.2;
   font-weight: 600;
   letter-spacing: 0.1em;
+  //border-bottom: solid 3px;
+  // i {
+  //   color: black;
+  // }
 }
 .jumbotron {
-  // background-color: $pistachio;
-  background: rgb(122, 182, 144);
-  background: radial-gradient(
-    circle,
-    rgba(122, 182, 144, 1) 75%,
-    rgba(150, 202, 153, 1) 98%
-  );
+  background-color: #76ae8b;
+}
+
+.adjustements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .underHero {
   margin: 40px auto;
@@ -123,7 +105,8 @@ nav {
 .heroHeader {
   font-weight: 600;
   font-size: 4rem;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
+  color: $white;
 }
 
 // rules
@@ -134,14 +117,10 @@ nav {
   width: 100%;
   flex-grow: 1;
   justify-content: center;
-  // background-color: $platinum;
-  // box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
-  //   rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 
   padding: 40px;
 
   h2 {
-    // color: $platinum;
     color: $darkRed;
     display: flex;
     flex-direction: column;
@@ -222,13 +201,13 @@ footer {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      120deg,
-      transparent,
-      rgba(15, 138, 95, 0.4),
-      // Updated gradient color
-      transparent
-    );
+    // background: linear-gradient(
+    //   120deg,
+    //   transparent,
+    //   rgba(15, 138, 95, 0.4),
+    //   // Updated gradient color
+    //   transparent
+    //);
     transition: all 650ms;
   }
 
@@ -236,55 +215,55 @@ footer {
     left: 100%; // Ensures the gradient slides across the button on hover
   }
 }
-.content {
-  position: relative; // Ensures proper positioning within the content
+// .content {
+//   position: relative; // Ensures proper positioning within the content
 
-  .text-block {
-    position: relative; // Needed for positioning the divider correctly
-    padding-left: 20px; // Adds space for the divider and some margin
+//   .text-block {
+//     position: relative; // Needed for positioning the divider correctly
+//     padding-left: 20px; // Adds space for the divider and some margin
 
-    .vertical-divider {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0; // Align to the left inside the text block
-      width: 4px; // Increased thickness of the divider
-      background-color: #0f8a5f; // The specified dark teal color
-      margin-left: -15px; // Adjusts the position to the left outside the text block
-    }
-  }
-}
+//     .vertical-divider {
+//       position: absolute;
+//       top: 0;
+//       bottom: 0;
+//       left: 0; // Align to the left inside the text block
+//       width: 4px; // Increased thickness of the divider
+//       background-color: #0f8a5f; // The specified dark teal color
+//       margin-left: -15px; // Adjusts the position to the left outside the text block
+//     }
+//   }
+// }
 
-// Ensure responsiveness
-@media (max-width: 991px) {
-  .vertical-divider {
-    display: none; // Hide on smaller screens
-  }
-}
+// // Ensure responsiveness
+// @media (max-width: 991px) {
+//   .vertical-divider {
+//     display: none; // Hide on smaller screens
+//   }
+// }
 
-// Animace onload
+// // Animace onload
 
-/* Initial state of the elements */
-.hero .text-block {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
+// /* Initial state of the elements */
+// .hero .text-block {
+//   opacity: 0;
+//   transform: translateY(20px);
+//   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+// }
 
-.hero .vertical-divider {
-  height: 0;
-  transition: height 0.7s ease-out 0.7s; /* Delaying the start of the animation */
-}
+// .hero .vertical-divider {
+//   height: 0;
+//   transition: height 0.7s ease-out 0.7s; /* Delaying the start of the animation */
+// }
 
-/* Animated state */
-.hero .text-block.active {
-  opacity: 1;
-  transform: translateY(0);
-}
+// /* Animated state */
+// .hero .text-block.active {
+//   opacity: 1;
+//   transform: translateY(0);
+// }
 
-.hero .vertical-divider.active {
-  height: 350px; /* Adjust height according to your design */
-}
+// .hero .vertical-divider.active {
+//   height: 320px; /* Adjust height according to your design */
+// }
 
 /* Initial state of the button */
 .hero .button-38 {
@@ -299,13 +278,42 @@ footer {
   transform: translateY(0);
 }
 
+//spacer
 .spacer {
   width: 100%;
-  aspect-ratio: 900/80;
+  aspect-ratio: 960/23;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .layer1 {
-  background-image: url(/assets/images/spacer.webp);
+  background-image: url("/assets/images/waveSeparator.svg");
+}
+
+// Slideshhow
+
+.slideshow {
+  position: relative;
+  height: 600px; /* Adjust height as needed */
+  width: 100%;
+  overflow: hidden;
+}
+
+.slideshow img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.slideshow img.fade {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05); /* Slightly larger scale for a zoom effect */
 }

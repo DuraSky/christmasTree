@@ -43,18 +43,16 @@
     <header>
       <!-- navbar -->
       <nav class="navbar navbar-expand-md">
-        <div class="container navigationCustom">
+        <div class="container-fluid px-5">
           <!-- navbar brand / title -->
           <a class="navbar-brand" href="#intro">
             <img
               src="/assets/images/logoWhite.webp"
-              width="150px"
+              width="60px"
               alt=""
               srcset=""
             />
           </a>
-          <div class="border-animation"></div>
-          <!-- Border animation directly below the logo -->
 
           <!-- toggle button for mobile nav -->
           <button
@@ -95,73 +93,65 @@
                   ><i class="bi bi-telephone-fill"></i> Kontakt</a
                 >
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact"
+                  ><i class="bi bi-telephone-fill"></i> Kontakt</a
+                >
+              </li>
             </ul>
           </div>
-          <div class="border-animation"></div>
-          <!-- Border animation directly below the navigation items -->
         </div>
       </nav>
-
-      <!-- <hr /> -->
     </header>
 
     <section class="hero">
-      <div class="jumbotron py-5 jumbotron-fluid">
+      <div class="jumbotron">
         <div
-          class="container d-flex flex-lg-row flex-column align-items-center"
+          class="container-fluid flex-lg-row flex-column align-items-center adjustements"
         >
           <!-- Content on the left -->
-          <div class="content position-relative">
+          <div class="content">
             <div class="text-block">
               <div class="vertical-divider"></div>
               <!-- Divider now relative to text only -->
               <h1 class="heroHeader">Stromy jako živé</h1>
               <p class="lead">
                 Ponořte se do zázračné atmosféry Vánoc s našimi exkluzivními
-                umělými stromky. Každý strom je pečlivě navržen s ohledem na
-                nejvyšší standardy kvality, aby vaše svátky byly naplněny září a
-                pohodou.
+                umělými stromky.
               </p>
               <p>
                 S našimi stromky zažijete Vánoce plné magie a elegance, která
                 zůstane ve vašem domově navždy.
               </p>
             </div>
-            <a class="btn button-38" href="#" role="button">Zjistit více ↪</a>
+            <a class="btn" href="#" role="button">Zjistit více ↪</a>
           </div>
 
-          <!-- <img
-            src="/assets/images/snowflake.png"
-            class="hero-scribble2"
+          <!-- <div
+            class="position-relative w-100 py-5 slideshow"
+            style="z-index: 2"
+          >
+            <img
+              src="/assets/images/tree1.png"
+              alt="Decorative Tree"
+              class="img-fluid fade"
+              style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+            />
+            <img
+              src="/assets/images/tree2.webp"
+              alt="Decorative Tree"
+              class="img-fluid"
+              style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+            />
+          </div> -->
+
+          <img
+            src="/assets/images/freepikImg.jpg"
+            class="img-fluid"
+            width="700px"
             alt=""
             srcset=""
           />
-
-          <img
-            src="/assets/images/snowflake.png"
-            class="hero-scribble1"
-            alt=""
-            srcset=""
-          /> -->
-          <!-- <img
-            src="/assets/images/output-onlinepngtools.png"
-            class="hero-scribble2"
-            alt=""
-          /> -->
-
-          <!-- Image on the right -->
-          <img
-            src="/assets/images/tree-Photoroom.png-Photoroom.png"
-            alt=""
-            class="img-fluid ml-md-auto order-md-2"
-            width="600px"
-          />
-          <!-- <img
-            src="/assets/images/testing.webp"
-            width="600px"
-            alt=""
-            srcset=""
-          /> -->
         </div>
       </div>
     </section>
@@ -506,7 +496,7 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
-    <script src="/assets/scripts/jumbotron.js"></script>
-    <script src="/assets/scripts/border.js"></script>
+    <!-- <script src="/assets/scripts/jumbotron.js"></script> -->
+    <script src="/assets/scripts/jumbotronSlideshow.js"></script>
   </body>
 </html>
