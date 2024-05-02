@@ -1,1 +1,227 @@
-body{background-color:#faf8f8;font-family:"Poppins",sans-serif;font-weight:normal;font-size:16px;line-height:1.6}h1,h2,h3,h4,h5,h6{color:#faf8f8;font-family:"Cinzel",serif}header{color:#faf8f8}.navbar .row{align-items:center}.navbar span{display:flex;padding:20px;align-items:center;color:#000}.navbar span h3{color:#000}.navbar-nav{flex-grow:.1;opacity:.8;justify-content:space-evenly}nav{background-color:#76ae8b;text-transform:uppercase}.nav-link{color:#faf8f8;line-height:1.2;font-weight:600;letter-spacing:.1em}.jumbotron{background-color:#76ae8b}.adjustements{display:flex;justify-content:center;align-items:center}.underHero{margin:40px auto}.heroHeader{font-weight:600;font-size:4rem;letter-spacing:.05em;color:#faf8f8}.belt{display:flex;flex-wrap:wrap;gap:20px;width:100%;flex-grow:1;justify-content:center;padding:40px}.belt h2{color:#d32320;display:flex;flex-direction:column;gap:10px;text-shadow:1px 1px 2px rgba(0,0,0,.7)}.belt p{padding-top:20px}.popis{padding-top:40px}.separator{transform:rotate(180deg)}.faq{margin:60px auto}.faq .row{align-items:center}.faq .closeup{border-radius:15px}.faq .accordion-button{background-color:#faf8f8}footer a{color:#000;text-decoration:none}footer p{color:#000}.max-width-custom{max-width:3000px;margin-right:auto;margin-left:auto}.btn{text-decoration:none;border:1px solid #0f8a5f;position:relative;overflow:hidden;color:#fff;background-color:#0f8a5f;padding:.75rem 1.5rem;font-size:1rem;transition:background-color .3s,color .3s}.btn:hover{color:#fff;background-color:rgba(15,138,95,.4);box-shadow:1px 1px 25px 10px rgba(15,138,95,.4)}.btn::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;transition:all 650ms}.btn:hover::before{left:100%}.hero .button-38{opacity:0;transform:translateY(20px);transition:opacity .8s ease-out .8s,transform .8s ease-out .8s}.hero .button-38.active{opacity:1;transform:translateY(0)}.spacer{width:100%;aspect-ratio:960/23;background-repeat:no-repeat;background-size:cover;background-position:center}.layer1{background-image:url("/assets/images/waveSeparator.svg")}.slideshow{position:relative;height:600px;width:100%;overflow:hidden}.slideshow img{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%) scale(1);max-height:100%;max-width:100%;width:auto;height:auto;opacity:0;transition:opacity 1s ease-in-out,transform 1s ease-in-out}.slideshow img.fade{opacity:1;transform:translate(-50%, -50%) scale(1.05)}/*# sourceMappingURL=style.css.map */
+body {
+  background-color: #faf8f8;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #faf8f8;
+  font-family: "Cinzel", serif;
+}
+
+header {
+  color: #faf8f8;
+}
+
+.navbar .row {
+  align-items: center;
+}
+.navbar span {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  color: black;
+}
+.navbar span h3 {
+  color: black;
+}
+
+.navbar-nav {
+  flex-grow: 0.1;
+  justify-content: space-evenly;
+}
+
+nav {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.jumbotron {
+  padding-top: 40px;
+  background: url("../images/branch.png") top right/contain no-repeat, url("../images/261.jpg") center right/contain repeat, linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)); /* Lighter overlay for subtle blending */
+  background-blend-mode: normal, overlay, normal; /* Normal blend mode for branch, overlay for second image */
+}
+
+.adjustements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underHero {
+  margin: 40px auto;
+}
+
+.heroHeader {
+  font-weight: 800;
+  font-size: 7rem;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  background-color: transparent;
+  color: #0f8a5f;
+  font-family: "Courgette", cursive;
+}
+
+.heroText {
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+.belt {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 40px;
+}
+.belt h2 {
+  color: #d32320;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+.belt p {
+  padding-top: 20px;
+}
+
+.popis {
+  padding-top: 40px;
+}
+
+.separator {
+  transform: rotate(180deg);
+}
+
+.faq {
+  margin: 60px auto;
+}
+.faq .row {
+  align-items: center;
+}
+.faq .closeup {
+  border-radius: 15px;
+}
+.faq .accordion-button {
+  background-color: #faf8f8;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+footer p {
+  color: black;
+}
+
+/* Custom CSS to limit the maximum width of fluid containers */
+.max-width-custom {
+  max-width: 3000px; /* or any maximum width you prefer */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn {
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  color: #faf8f8;
+  background-color: #d32320;
+  opacity: 0.9;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn:hover {
+  color: #fff;
+  background-color: rgba(15, 138, 95, 0.4);
+  box-shadow: 1px 1px 25px 10px rgba(15, 138, 95, 0.4);
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: all 650ms;
+}
+.btn:hover::before {
+  left: 100%;
+}
+
+/* Initial state of the button */
+.hero .button-38 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s; /* Adding delay to synchronize with text */
+}
+
+/* Animated state */
+.hero .button-38.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.spacer {
+  width: 100%;
+  aspect-ratio: 960/23;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.layer1 {
+  background-image: url("/assets/images/waveSeparator.svg");
+}
+
+.slideshow {
+  position: relative;
+  height: 600px; /* Adjust height as needed */
+  width: 100%;
+  overflow: hidden;
+}
+
+.slideshow img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.slideshow img.fade {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05); /* Slightly larger scale for a zoom effect */
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.underline {
+  -webkit-text-decoration: solid underline #d32320 5px;
+          text-decoration: solid underline #d32320 5px;
+}/*# sourceMappingURL=style.css.map */
