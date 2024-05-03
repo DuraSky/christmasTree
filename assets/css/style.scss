@@ -1,7 +1,7 @@
 @import "variables";
 
 //$font-headings: "Playfair Display", serif;
-$font-headings: "Cinzel", serif;
+$font-headings: "Courgette", cursive;
 //$font-body: "Lora", serif;
 $font-body: "Poppins", sans-serif;
 
@@ -37,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $white;
+  color: $darkGreen;
 
   font-family: $font-headings;
   // font-weight: 700; // Použití tučné varianty pro nadpisy
@@ -49,6 +49,7 @@ header {
 }
 
 .navbar {
+  padding: 20px;
   .row {
     align-items: center;
   }
@@ -123,7 +124,7 @@ nav {
   align-items: center;
 }
 .underHero {
-  margin: 40px auto;
+  margin: 500px auto;
 }
 
 .heroHeader {
@@ -131,16 +132,52 @@ nav {
   font-size: 7rem;
   letter-spacing: 0.05em;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
-  background-color: transparent;
-  //color: #76ae8b;
-  color: $darkGreen;
-  font-family: "Courgette", cursive;
 }
 
 .heroText {
   font-size: 1.2rem;
   letter-spacing: 0.05em;
   font-weight: 500;
+}
+
+.test {
+  margin-top: 40px;
+}
+
+.produkty {
+  margin-top: 40px;
+}
+
+.productsStart {
+  display: flex;
+  flex-wrap: nowrap; /* Ensures that elements can wrap if needed */
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.productsEnd {
+  justify-content: flex-end; /* Aligns content to the end */
+}
+
+.imgProduct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textProducts {
+  width: 800px;
+}
+
+.closeup {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  img {
+    border-radius: 40px;
+  }
 }
 
 // rules
