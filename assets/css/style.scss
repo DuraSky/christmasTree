@@ -5,30 +5,19 @@ $font-headings: "Courgette", cursive;
 //$font-body: "Lora", serif;
 $font-body: "Poppins", sans-serif;
 
-//$font-headings: "Sancreek", serif;
-
-// $gold: #d4af37;
 $white: #faf8f8;
-// $platinum: #e2eae6;
 
 // Christmas Palette
 $lightRed: #f5624d;
 $darkRed: #d32320;
 $lightGreen: #34a65f;
 $darkGreen: #0f8a5f;
-$blue: #235e6f;
-
-// $pistachio: #e4f1e8;
-
-// $pistachio: #7ab690;
-// $pistachio: #96ca99;
 
 body {
-  //background-color: $white;
   font-family: $font-body;
   font-weight: normal;
-  font-size: 16px; // Případně upravte podle potřeb
-  line-height: 1.6; // Případně upravte podle potřeb
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 h1,
@@ -37,14 +26,13 @@ h3,
 h4,
 h5,
 h6 {
-  color: $darkGreen;
+  color: $darkRed;
 
   font-family: $font-headings;
-  // font-weight: 700; // Použití tučné varianty pro nadpisy
 }
 
+// header and nav
 header {
-  //border-bottom: 1px solid;
   color: $white;
 }
 
@@ -69,15 +57,10 @@ header {
 
 .navbar-nav {
   flex-grow: 0.05;
-  //opacity: 0.8;
   justify-content: space-evenly;
-
-  //border-bottom: solid 3px;
-  // gap: 10px;
 }
 
 nav {
-  //background-color: #76ae8b;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   text-transform: uppercase;
 }
@@ -87,129 +70,79 @@ nav {
   line-height: 1.2;
   font-weight: 600;
   letter-spacing: 0.1em;
-  //border-bottom: solid 3px;
-  // i {
-  //   color: black;
-  // }
 }
-// THIS ONe
-// .jumbotron {
-//   padding-top: 40px;
 
-//   background: url("../images/branch.png") top right / contain no-repeat,
-//     /* Branch image */ url("../images/pattern.jpg") center right / contain
-//       repeat,
-//     /* Second image */
-//       linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)); /* Lighter overlay for subtle blending */
-//   background-blend-mode: normal, overlay, normal; /* Normal blend mode for branch, overlay for second image */
-// }
-
+// hero section (jumbotron)
 .jumbotron {
   padding: 80px 0;
+  display: flex;
+  align-items: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
-  background: url("../images/whiteBranch.png") top left / contain no-repeat,
-    /* New image, top left */ url("../images/branch.png") top right / contain
-      no-repeat,
-    /* Branch image, top right */ url("../images/pattern.jpg") center / contain
-      repeat,
-    /* Background image, covers entire element */
-      linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); /* Lighter overlay for subtle blending */
-  background-blend-mode: normal, normal, overlay, normal; /* Normal blend mode for new and branch images, overlay for pattern */
-}
+  background: url("../images/pattern.jpg") center / contain repeat,
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+  background-blend-mode: overlay;
 
-.adjustements {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.underHero {
-  margin: 500px auto;
-}
+  .heroHeader {
+    color: $darkGreen;
+    font-size: 5rem;
+    letter-spacing: 0.05em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+    font-weight: 800;
+    span {
+      text-decoration: solid underline $darkRed 5px;
+    }
+  }
 
-.heroHeader {
-  font-weight: 800;
-  font-size: 7rem;
-  letter-spacing: 0.05em;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
-}
-
-.heroText {
-  font-size: 1.2rem;
-  letter-spacing: 0.05em;
-  font-weight: 500;
-}
-
-.test {
-  margin-top: 40px;
-}
-
-.produkty {
-  margin-top: 40px;
-}
-
-.productsStart {
-  display: flex;
-  flex-wrap: nowrap; /* Ensures that elements can wrap if needed */
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  gap: 40px;
-}
-
-.productsEnd {
-  justify-content: flex-end; /* Aligns content to the end */
-}
-
-.imgProduct {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.textProducts {
-  width: 800px;
-}
-
-.closeup {
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  img {
-    border-radius: 40px;
+  .heroText {
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    font-weight: 500;
   }
 }
 
-// rules
-.belt {
+// Products section
+.products {
+  padding-top: 80px;
+  box-shadow: 0 20px 10px -20px rgba(0, 0, 0, 0.45) inset;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-  flex-grow: 1;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap; // Changed to wrap for better responsiveness
+  // background: url("../images/patternTest.jpg") center / contain repeat,
+  //   linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  // background-blend-mode: overlay;
+  h1 {
+    font-size: 3rem;
+  }
 
-  padding: 40px;
-
-  h2 {
-    color: $darkRed;
+  margin-bottom: 400px; //development only margin
+  .row {
+    width: 100%; // Ensure the row takes full width of its container
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-  }
-
-  p {
-    padding-top: 20px;
+    align-items: stretch; // Stretch all columns to fill the row height
+    .col-lg-4 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 80px;
+      .info-box {
+        flex: 1; // Make boxes flex to fill the column space
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // Center content vertically
+        max-width: 300px;
+        h3 {
+          font-weight: 800;
+        }
+      }
+    }
   }
 }
+
+// Unfinished rest of the page
 
 .popis {
   padding-top: 40px;
-}
-
-.separator {
-  transform: rotate(180deg);
 }
 
 .faq {
@@ -359,67 +292,37 @@ footer {
   transition: 50ms linear;
 }
 
-//spacer
-.spacer {
-  width: 100%;
-  aspect-ratio: 960/23;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+// Medias
+
+@media (min-width: 1400px) {
+  .jumbotron {
+    background: url("../images/branch.png") top right / contain no-repeat,
+      url("../images/pattern.jpg") center / contain repeat,
+      linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+    background-blend-mode: normal, overlay, normal; /* Adjusted blend modes */
+
+    .content {
+      align-items: flex-start;
+    }
+    .heroHeader {
+      font-size: 7rem;
+    }
+  }
 }
 
-.layer1 {
-  background-image: url("/assets/images/waveSeparator.svg");
-}
+/* Media query for large devices (desktops) */
+@media (min-width: 2000px) {
+  .jumbotron {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
-// Slideshhow
+    background: url("../images/whiteBranch.png") top left / contain no-repeat,
+      url("../images/branch.png") top right / contain no-repeat,
+      url("../images/pattern.jpg") center / contain repeat,
+      linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); /* Lighter overlay for subtle blending */
+    background-blend-mode: normal, normal, overlay, normal; /* Normal blend mode for new and branch images, overlay for pattern */
 
-// .fancy {
-//   --b: 6px; /* control the border thickness */
-//   --w: 80px; /* control the width of the line*/
-//   --g: 15px; /* control the gap */
-//   --c: #faf8f8;
-
-//   width: fit-content;
-//   padding: 0 1em;
-//   line-height: 1.6em;
-//   border: 1px solid transparent; /* Set border color to transparent */
-
-//   background: conic-gradient(from 45deg at left, var(--c) 25%, #0000 0) 0,
-//     conic-gradient(from -135deg at right, var(--c) 25%, #0000 0) 100%;
-//   background-size: 51% 100%;
-//   background-origin: border-box;
-//   background-repeat: no-repeat;
-
-//   margin-inline: auto;
-//   transition: all 0.3s ease; /* Smooth transitions on size changes */
-// }
-
-// /* Responsive adjustments for smaller screens */
-// @media (max-width: 768px) {
-//   .fancy {
-//     --w: 40px; /* Smaller line width */
-//     --g: 10px; /* Smaller gap */
-//     padding: 0 0.5em; /* Less padding */
-//     line-height: 1.2em; /* Smaller line-height for tighter fit */
-//   }
-// }
-
-// /* Further adjustments for very small screens */
-// @media (max-width: 480px) {
-//   .fancy {
-//     min-width: 400px;
-//     --w: 10px; /* Even smaller line width */
-//     --g: 2px; /* Even smaller gap */
-//     font-size: 0.1em; /* Smaller font size if necessary */
-//   }
-// }
-
-.underline {
-  text-decoration: solid underline $darkRed 5px;
-
-  // color: $white;
-  // text-decoration: #d33939 underline dotted;
-  // text-decoration-skip: ink;
-  // opacity: 0.9;
+    .heroHeader {
+      font-size: 7rem;
+    }
+  }
 }
