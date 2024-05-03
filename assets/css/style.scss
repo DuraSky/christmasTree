@@ -18,6 +18,10 @@ body {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.6;
+
+  background: url("../images/pattern.jpg") center / contain repeat,
+    linear-gradient(rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.98));
+  background-blend-mode: overlay;
 }
 
 h1,
@@ -37,6 +41,7 @@ header {
 }
 
 .navbar {
+  background-color: $white;
   padding: 20px;
   .row {
     align-items: center;
@@ -102,39 +107,54 @@ nav {
 }
 
 // Products section
-.products {
+.benefits {
   padding-top: 80px;
-  box-shadow: 0 20px 10px -20px rgba(0, 0, 0, 0.45) inset;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; // Changed to wrap for better responsiveness
-  // background: url("../images/patternTest.jpg") center / contain repeat,
-  //   linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
-  // background-blend-mode: overlay;
+  flex-wrap: wrap;
+
+  margin-bottom: 80px;
+
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: $darkGreen;
+    padding-bottom: 20px;
   }
 
-  margin-bottom: 400px; //development only margin
-  .row {
-    width: 100%; // Ensure the row takes full width of its container
-    display: flex;
-    align-items: stretch; // Stretch all columns to fill the row height
-    .col-lg-4 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 80px;
-      .info-box {
-        flex: 1; // Make boxes flex to fill the column space
-        display: flex;
-        flex-direction: column;
-        justify-content: center; // Center content vertically
-        max-width: 300px;
-        h3 {
-          font-weight: 800;
-        }
+  .info-box {
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    flex-basis: 100%; // Full width on smaller screens
+
+    h3 {
+      font-size: 1.4rem;
+      color: $darkGreen;
+      margin-bottom: 10px;
+      i {
+        color: $darkGreen;
+        margin-right: 5px;
       }
+    }
+
+    p {
+      color: #666;
+      line-height: 1.6;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .info-box {
+      flex-basis: calc(50% - 20px); // Two boxes per row on medium screens
+    }
+  }
+
+  @media (min-width: 992px) {
+    .info-box {
+      flex-basis: calc(33.333% - 20px); // Three boxes per row on large screens
     }
   }
 }
