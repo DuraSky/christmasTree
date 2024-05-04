@@ -12,6 +12,7 @@ $lightRed: #f5624d;
 $darkRed: #d32320;
 $lightGreen: #34a65f;
 $darkGreen: #0f8a5f;
+$lightGray: #f8f9fa;
 
 body {
   font-family: $font-body;
@@ -24,13 +25,22 @@ body {
   background-blend-mode: overlay;
 }
 
+section {
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: $darkGreen;
+    padding-bottom: 20px;
+  }
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: $darkRed;
+  color: $darkGreen;
 
   font-family: $font-headings;
 }
@@ -69,6 +79,7 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   text-transform: uppercase;
 }
+
 .nav-link {
   //color: $white;
   color: black;
@@ -79,7 +90,7 @@ nav {
 
 // hero section (jumbotron)
 .jumbotron {
-  padding: 80px 0;
+  padding: 60px 0;
   display: flex;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -106,21 +117,14 @@ nav {
   }
 }
 
-// Products section
+// Benefits section
 .benefits {
-  padding-top: 80px;
+  padding-top: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 
   margin-bottom: 80px;
-
-  h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: $darkGreen;
-    padding-bottom: 20px;
-  }
 
   .info-box {
     background-color: $white;
@@ -135,7 +139,6 @@ nav {
       color: $darkGreen;
       margin-bottom: 10px;
       i {
-        color: $darkGreen;
         margin-right: 5px;
       }
     }
@@ -159,37 +162,233 @@ nav {
   }
 }
 
+//Produts section
+.products {
+  padding-top: 30px;
+  text-align: center;
+  margin-bottom: 80px;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+
+  .product {
+    flex-basis: 100%; // Full width on smaller screens
+    max-width: 400px; // Maximum width to control product size
+    border-radius: 8px; // Rounded corners for all boxes
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); // Consistent shadow for depth
+    overflow: hidden; // Keeps all content within the box boundaries
+    display: flex;
+    flex-direction: column; // Flexbox for vertical stacking
+    margin-bottom: 80px;
+
+    img.img-fluid {
+      width: 100%; // Makes image responsive within the container
+      max-height: 350px; // Sets a maximum height for all images
+      object-fit: cover; // Ensures images cover the allotted area without distortion
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column; // Ensures content stacks vertically
+      flex-grow: 1; // Allows the text container to expand
+      justify-content: space-between; // Spaces content and pushes the button down
+      padding: 10px;
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        color: #666;
+        line-height: 1.6;
+        font-size: 0.9rem;
+        margin-bottom: 10px; // Ensures spacing above the button
+      }
+
+      .treeProperties {
+        // Style for the weight and height information
+        display: flex;
+        background-color: #f0f0f0; // Light background to highlight the section
+        padding: 8px;
+        border-radius: 5px; // Rounded corners for the specs area
+        margin: 10px 0; // Vertical margin for separation from text and button
+
+        p {
+          flex: 1;
+          text-align: center; // Centers text for uniform look
+          margin: 0 10px; // Adds horizontal spacing between weight and height
+
+          i {
+            color: $darkGreen; // Colored icons to attract attention
+            margin-right: 5px; // Space between icon and text
+          }
+        }
+      }
+
+      button {
+        align-self: center; // Centers the button within the flex container
+
+        background-color: $darkGreen;
+        color: $white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken($darkGreen, 10%);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .product {
+      flex-basis: calc(50% - 20px); // Adjusts to two products per row
+    }
+  }
+
+  @media (min-width: 992px) {
+    .product {
+      flex-basis: calc(25% - 20px); // Adjusts to four products per row
+    }
+  }
+}
+
+//FAQ
+
+.faq {
+  background: url("../images/pattern.jpg") center / contain repeat,
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+  background-blend-mode: overlay;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 40px 0; // Symmetric vertical padding
+  margin-bottom: 80px;
+
+  h1 {
+    padding-bottom: 20px;
+    color: $darkGreen; // Adds a touch of theme color to the header
+    font-size: 2.2rem; // Slightly smaller for a more elegant look
+  }
+
+  .accordion-item {
+    border: none; // Removes default borders
+    background-color: $white;
+    margin-bottom: 10px; // Adds spacing between accordion items
+    border-radius: 8px; // Rounds the corners
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); // Subtle shadow for depth
+
+    .accordion-header {
+      button.accordion-button {
+        background-color: $lightGray; // Light background for the button
+        color: $darkGreen; // Theme color for the text
+        font-size: 1.2rem; // Appropriate font size for readability
+        padding: 15px 20px; // More padding for a better touch area
+
+        &:not(.collapsed) {
+          background-color: $darkGreen; // Darker background when expanded
+          color: $white; // White text when expanded
+        }
+
+        &::after {
+          content: ""; // Removes default arrow icons
+          background-image: url("/path/to/your/custom-icon.svg"); // Custom icon for expand/collapse
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    .accordion-collapse {
+      transition: max-height 0.4s ease-in-out; // Smooth transition for expanding/collapsing
+
+      .accordion-body {
+        padding: 20px; // Uniform padding
+        font-size: 0.95rem; // Slightly smaller font for the body
+        line-height: 1.4; // Improved line height for readability
+        color: #555; // Slightly darker text for better contrast
+      }
+    }
+  }
+}
+
+//sestaveni
+.sestaveni {
+  margin-bottom: 80px;
+}
+
+//cta
+.cta {
+  padding: 40px 0; // Generous padding for visual space
+}
+
 // Unfinished rest of the page
 
 .popis {
   padding-top: 40px;
 }
 
-.faq {
-  margin: 60px auto;
-
-  .row {
-    align-items: center;
-  }
-
-  .closeup {
-    border-radius: 15px;
-  }
-
-  .accordion-button {
-    background-color: $white;
-  }
-}
-
 footer {
-  // background-color: $platinum;
-  a {
-    color: black;
-    text-decoration: none;
+  background-color: $white; // Dark navy for a distinguished look
+  color: #ffffff; // White text for contrast
+  padding: 20px 0; // Padding on top and bottom for space
+  font-size: 0.9rem; // Slightly smaller font size for footer elements
+
+  .container {
+    padding: 20px; // Padding inside the container for more space
   }
 
-  p {
-    color: black;
+  h5 {
+    font-weight: 700; // Bold weight for subsection titles
+    font-size: 1.1rem; // Larger font size for titles
+    margin-bottom: 15px; // Space below titles
+  }
+
+  ul {
+    list-style-type: none; // Removes bullet points
+    padding: 0; // Removes default padding
+    margin: 0; // Removes default margin
+
+    li a {
+      color: $darkGreen;
+      text-decoration: none; // No underline
+      transition: color 0.3s ease-in-out; // Smooth transition for hover effect
+
+      &:hover {
+        color: $darkRed; // Change color on hover to gold
+      }
+    }
+  }
+
+  .justify-content-space {
+    justify-content: space-between; // Space between elements horizontally
+  }
+
+  .text-center {
+    text-align: center; // Center-align text
+    border-top: 1px solid #34495e; // Subtle border for top
+    padding-top: 10px; // Padding on top of the border
+  }
+
+  .me-2 {
+    margin-right: 8px; // Margin right for spacing social media icons
+  }
+
+  .bi {
+    font-size: 1.5rem; // Larger icons for visibility
   }
 }
 
@@ -199,52 +398,6 @@ footer {
   margin-right: auto;
   margin-left: auto;
 }
-
-// .btn {
-//   text-decoration: none;
-//   position: relative;
-//   overflow: hidden;
-//   color: $white;
-
-//   background-color: $darkRed;
-//   opacity: 0.9;
-//   padding: 0.75rem 1.5rem; // Standard Bootstrap padding for buttons
-//   font-size: 1rem; // Standard Bootstrap font size for buttons
-//   transition: background-color 0.3s, color 0.3s; // Smooth transition for hover effects
-
-//   &:hover {
-//     color: #fff; // White text on hover
-//     background-color: rgba(15, 138, 95, 0.4); // Updated color with transparency
-//     box-shadow: 1px 1px 25px 10px rgba(15, 138, 95, 0.4); // Updated shadow color
-//   }
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: -100%;
-//     width: 100%;
-//     height: 100%;
-//     transition: all 650ms;
-//   }
-
-//   &:hover::before {
-//     left: 100%; // Ensures the gradient slides across the button on hover
-//   }
-// }
-
-// /* Initial state of the button */
-// .hero .button-38 {
-//   opacity: 0;
-//   transform: translateY(20px);
-//   transition: opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s; /* Adding delay to synchronize with text */
-// }
-
-// /* Animated state */
-// .hero .button-38.active {
-//   opacity: 1;
-//   transform: translateY(0);
-// }
 
 .button {
   display: inline-block;
