@@ -1,19 +1,5 @@
 @import "variables";
 
-//$font-headings: "Playfair Display", serif;
-$font-headings: "Courgette", cursive;
-//$font-body: "Lora", serif;
-$font-body: "Poppins", sans-serif;
-
-$white: #faf8f8;
-
-// Christmas Palette
-$lightRed: #f5624d;
-$darkRed: #d32320;
-$lightGreen: #34a65f;
-$darkGreen: #0f8a5f;
-$lightGray: #f8f9fa;
-
 body {
   font-family: $font-body;
   font-weight: normal;
@@ -41,7 +27,6 @@ h4,
 h5,
 h6 {
   color: $darkGreen;
-
   font-family: $font-headings;
 }
 
@@ -60,10 +45,9 @@ header {
   span {
     display: flex;
     padding: 20px;
-
-    align-items: center;
     color: black;
 
+    align-items: center;
     h3 {
       color: black;
     }
@@ -81,7 +65,6 @@ nav {
 }
 
 .nav-link {
-  //color: $white;
   color: black;
   line-height: 1.2;
   font-weight: 600;
@@ -90,9 +73,10 @@ nav {
 
 // hero section (jumbotron)
 .jumbotron {
-  padding: 60px 0;
   display: flex;
   align-items: center;
+
+  padding: 60px 0;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
   background: url("../images/pattern.jpg") center / contain repeat,
@@ -117,23 +101,54 @@ nav {
   }
 }
 
+@media (min-width: 1400px) {
+  .jumbotron {
+    background: url("../images/branch.png") top right / contain no-repeat,
+      url("../images/pattern.jpg") center / contain repeat,
+      linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+    background-blend-mode: normal, overlay, normal; /* Adjusted blend modes */
+
+    .content {
+      align-items: flex-start;
+    }
+    .heroHeader {
+      font-size: 7rem;
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .jumbotron {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    background: url("../images/whiteBranch.png") top left / contain no-repeat,
+      url("../images/branch.png") top right / contain no-repeat,
+      url("../images/pattern.jpg") center / contain repeat,
+      linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); /* Lighter overlay for subtle blending */
+    background-blend-mode: normal, normal, overlay, normal; /* Normal blend mode for new and branch images, overlay for pattern */
+
+    .heroHeader {
+      font-size: 7rem;
+    }
+  }
+}
+
 // Benefits section
 .benefits {
-  padding-top: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 
   margin-bottom: 80px;
-
+  padding-top: 20px;
   .info-box {
+    flex-basis: 100%;
+
     background-color: $white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 10px;
-    flex-basis: 100%; // Full width on smaller screens
-
     h3 {
       font-size: 1.4rem;
       color: $darkGreen;
@@ -164,10 +179,11 @@ nav {
 
 //Produts section
 .products {
-  padding-top: 30px;
-  text-align: center;
-  margin-bottom: 80px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
+  background-color: #ffffffab; // Light gray background for subtle contrast
 
+  padding-top: 20px;
   h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -181,61 +197,63 @@ nav {
   }
 
   .product {
-    flex-basis: 100%; // Full width on smaller screens
-    max-width: 400px; // Maximum width to control product size
-    border-radius: 8px; // Rounded corners for all boxes
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); // Consistent shadow for depth
-    overflow: hidden; // Keeps all content within the box boundaries
     display: flex;
-    flex-direction: column; // Flexbox for vertical stacking
-    margin-bottom: 80px;
+    flex-direction: column;
+    flex-basis: 100%;
+    overflow: hidden;
 
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 80px;
     img.img-fluid {
-      width: 100%; // Makes image responsive within the container
-      max-height: 350px; // Sets a maximum height for all images
-      object-fit: cover; // Ensures images cover the allotted area without distortion
+      width: 100%;
+      max-height: 350px;
+      object-fit: contain;
     }
 
     .text {
       display: flex;
-      flex-direction: column; // Ensures content stacks vertically
-      flex-grow: 1; // Allows the text container to expand
-      justify-content: space-between; // Spaces content and pushes the button down
-      padding: 10px;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
 
+      padding: 10px;
       h3 {
         font-size: 1.2rem;
+        text-align: center;
       }
 
       p {
         color: #666;
         line-height: 1.6;
         font-size: 0.9rem;
-        margin-bottom: 10px; // Ensures spacing above the button
+        margin-bottom: 10px;
       }
 
       .treeProperties {
-        // Style for the weight and height information
         display: flex;
-        background-color: #f0f0f0; // Light background to highlight the section
+
+        background-color: #f0f0f0;
         padding: 8px;
-        border-radius: 5px; // Rounded corners for the specs area
-        margin: 10px 0; // Vertical margin for separation from text and button
+        border-radius: 5px;
+        margin: 10px 0;
 
         p {
           flex: 1;
-          text-align: center; // Centers text for uniform look
-          margin: 0 10px; // Adds horizontal spacing between weight and height
+
+          text-align: center;
+          margin: 0 10px;
 
           i {
-            color: $darkGreen; // Colored icons to attract attention
-            margin-right: 5px; // Space between icon and text
+            color: $darkGreen;
+            margin-right: 5px;
           }
         }
       }
 
       button {
-        align-self: center; // Centers the button within the flex container
+        align-self: center;
 
         background-color: $darkGreen;
         color: $white;
@@ -266,43 +284,38 @@ nav {
 }
 
 //FAQ
-
 .faq {
-  background: url("../images/pattern.jpg") center / contain repeat,
-    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
-  background-blend-mode: overlay;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  padding: 40px 0; // Symmetric vertical padding
+  padding-top: 20px;
   margin-bottom: 80px;
 
   h1 {
     padding-bottom: 20px;
-    color: $darkGreen; // Adds a touch of theme color to the header
-    font-size: 2.2rem; // Slightly smaller for a more elegant look
+    color: $darkGreen;
+    font-size: 2.2rem;
   }
 
   .accordion-item {
-    border: none; // Removes default borders
-    background-color: $white;
-    margin-bottom: 10px; // Adds spacing between accordion items
-    border-radius: 8px; // Rounds the corners
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); // Subtle shadow for depth
+    border: none;
+    background-color: white;
+    margin-bottom: 2px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 
     .accordion-header {
       button.accordion-button {
-        background-color: $lightGray; // Light background for the button
-        color: $darkGreen; // Theme color for the text
-        font-size: 1.2rem; // Appropriate font size for readability
-        padding: 15px 20px; // More padding for a better touch area
+        background-color: $lightGray;
+        color: $darkGreen;
+        font-size: 1.2rem;
+        padding: 15px 20px;
 
         &:not(.collapsed) {
-          background-color: $darkGreen; // Darker background when expanded
-          color: $white; // White text when expanded
+          background-color: $darkGreen;
+          color: $white;
         }
 
         &::after {
-          content: ""; // Removes default arrow icons
-          background-image: url("/path/to/your/custom-icon.svg"); // Custom icon for expand/collapse
+          content: "";
+          background-image: url("../images/chevron-expand.svg");
           display: inline-block;
           width: 20px;
           height: 20px;
@@ -313,13 +326,13 @@ nav {
     }
 
     .accordion-collapse {
-      transition: max-height 0.4s ease-in-out; // Smooth transition for expanding/collapsing
+      transition: max-height 0.4s ease-in-out;
 
       .accordion-body {
-        padding: 20px; // Uniform padding
-        font-size: 0.95rem; // Slightly smaller font for the body
-        line-height: 1.4; // Improved line height for readability
-        color: #555; // Slightly darker text for better contrast
+        padding: 20px;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        color: #555;
       }
     }
   }
@@ -327,74 +340,103 @@ nav {
 
 //sestaveni
 .sestaveni {
-  margin-bottom: 80px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
+  background-color: #ffffff6b;
+  color: black;
+
+  h1 {
+    padding-top: 20px;
+    margin-bottom: 30px;
+    color: $darkGreen;
+  }
+
+  .row {
+    justify-content: center;
+  }
+
+  img.sestaveniImg {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
 
 //cta
 .cta {
-  padding: 40px 0; // Generous padding for visual space
+  padding: 80px 0;
+  h1 {
+    font-size: 4rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+  }
 }
 
-// Unfinished rest of the page
-
-.popis {
-  padding-top: 40px;
-}
+// Footer
 
 footer {
-  background-color: $white; // Dark navy for a distinguished look
-  color: #ffffff; // White text for contrast
-  padding: 20px 0; // Padding on top and bottom for space
-  font-size: 0.9rem; // Slightly smaller font size for footer elements
+  // background: url("../images/pattern.jpg") center / contain repeat,
+  //   linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+  // background-blend-mode: overlay;
+  background-color: $white;
+  color: $darkGreen;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
   .container {
-    padding: 20px; // Padding inside the container for more space
+    padding: 20px;
   }
 
   h5 {
-    font-weight: 700; // Bold weight for subsection titles
-    font-size: 1.1rem; // Larger font size for titles
-    margin-bottom: 15px; // Space below titles
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
   }
 
   ul {
-    list-style-type: none; // Removes bullet points
-    padding: 0; // Removes default padding
-    margin: 0; // Removes default margin
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 
     li a {
       color: $darkGreen;
-      text-decoration: none; // No underline
-      transition: color 0.3s ease-in-out; // Smooth transition for hover effect
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
 
       &:hover {
-        color: $darkRed; // Change color on hover to gold
+        color: $darkRed;
       }
     }
   }
 
   .justify-content-space {
-    justify-content: space-between; // Space between elements horizontally
+    justify-content: space-between;
   }
 
   .text-center {
-    text-align: center; // Center-align text
-    border-top: 1px solid #34495e; // Subtle border for top
-    padding-top: 10px; // Padding on top of the border
+    text-align: center;
+    border-top: 1px solid #34495e;
+    padding-top: 10px;
   }
 
   .me-2 {
-    margin-right: 8px; // Margin right for spacing social media icons
+    margin-right: 8px;
   }
 
   .bi {
-    font-size: 1.5rem; // Larger icons for visibility
+    font-size: 1.5rem;
+    color: $darkRed;
   }
 }
 
 /* Custom CSS to limit the maximum width of fluid containers */
 .max-width-custom {
-  max-width: 3000px; /* or any maximum width you prefer */
+  max-width: 3000px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -463,39 +505,4 @@ footer {
   -moz-transition: 50ms linear;
   -o-transition: 50ms linear;
   transition: 50ms linear;
-}
-
-// Medias
-
-@media (min-width: 1400px) {
-  .jumbotron {
-    background: url("../images/branch.png") top right / contain no-repeat,
-      url("../images/pattern.jpg") center / contain repeat,
-      linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
-    background-blend-mode: normal, overlay, normal; /* Adjusted blend modes */
-
-    .content {
-      align-items: flex-start;
-    }
-    .heroHeader {
-      font-size: 7rem;
-    }
-  }
-}
-
-/* Media query for large devices (desktops) */
-@media (min-width: 2000px) {
-  .jumbotron {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
-    background: url("../images/whiteBranch.png") top left / contain no-repeat,
-      url("../images/branch.png") top right / contain no-repeat,
-      url("../images/pattern.jpg") center / contain repeat,
-      linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); /* Lighter overlay for subtle blending */
-    background-blend-mode: normal, normal, overlay, normal; /* Normal blend mode for new and branch images, overlay for pattern */
-
-    .heroHeader {
-      font-size: 7rem;
-    }
-  }
 }
