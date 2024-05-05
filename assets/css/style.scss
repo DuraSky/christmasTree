@@ -104,7 +104,7 @@ nav {
     background: url("../images/branch.png") top right / contain no-repeat,
       url("../images/pattern.jpg") center / contain repeat,
       linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
-    background-blend-mode: normal, overlay, normal; /* Adjusted blend modes */
+    background-blend-mode: normal, overlay, normal;
 
     .content {
       align-items: flex-start;
@@ -122,8 +122,8 @@ nav {
     background: url("../images/whiteBranch.png") top left / contain no-repeat,
       url("../images/branch.png") top right / contain no-repeat,
       url("../images/pattern.jpg") center / contain repeat,
-      linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); /* Lighter overlay for subtle blending */
-    background-blend-mode: normal, normal, overlay, normal; /* Normal blend mode for new and branch images, overlay for pattern */
+      linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+    background-blend-mode: normal, normal, overlay, normal;
 
     .heroHeader {
       font-size: 7rem;
@@ -135,33 +135,33 @@ nav {
 .products {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
-  background-color: #ffffffab; /* Light gray background for subtle contrast */
+  background-color: #ffffffab;
   padding-top: 20px;
   padding-bottom: 40px;
 
   h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    text-align: center; /* Centers the title */
+    text-align: center;
   }
 
   .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Ensures items are centered */
+    justify-content: center;
     gap: 10px;
-    margin: 0 auto; /* Added to center the container within the section */
+    margin: 0 auto;
   }
 
   .product {
     display: flex;
     flex-direction: column;
-    width: 100%; /* Full width on mobile */
-    max-width: 400px; /* Sets maximum width for each product */
+    width: 100%;
+    max-width: 400px;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Consistent margin */
+    margin-bottom: 20px;
 
     img.img-fluid {
       width: 100%;
@@ -213,9 +213,9 @@ nav {
         font-size: 0.9rem;
         .rating {
           display: flex;
-          color: #ffbb33; /* Golden color for stars */
+          color: #ffbb33;
           i {
-            margin-right: 3px; /* Space between stars */
+            margin-right: 3px;
           }
           p {
             display: flex;
@@ -246,11 +246,11 @@ nav {
 
 @media (min-width: 768px) {
   .container {
-    justify-content: space-between; /* Adjusts spacing to be even */
+    justify-content: space-between;
   }
 
   .product {
-    width: calc(50% - 10px); /* Adjust width to account for gap */
+    width: calc(50% - 10px);
   }
 }
 
@@ -287,13 +287,13 @@ nav {
 
   @media (min-width: 768px) {
     .info-box {
-      flex-basis: calc(50% - 20px); // Two boxes per row on medium screens
+      flex-basis: calc(50% - 20px);
     }
   }
 
   @media (min-width: 992px) {
     .info-box {
-      flex-basis: calc(33.333% - 20px); // Three boxes per row on large screens
+      flex-basis: calc(33.333% - 20px);
     }
   }
 }
