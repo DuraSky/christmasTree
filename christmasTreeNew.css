@@ -1,0 +1,107 @@
+// .hero {
+//   height: 50vh;
+//   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+//   background-image: linear-gradient(
+//       to bottom,
+//       rgba(0, 0, 0, 0.4),
+//       rgba(0, 0, 0, 0.4)
+//     ),
+//     //url("/assets/images/pexels-iriser-1734436.jpg");
+//     url("/assets/images/aurelio-arantes-7Dp9pomkCi8-unsplash.jpg");
+//   background-size: cover;
+//   background-position: center;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   //color: white;
+//   .hero-content {
+//     text-align: center;
+//     color: $white;
+
+//     /* Semi-transparent background for text */
+//     padding: 20px;
+//     border-radius: 10px;
+//     .heroHeader {
+//       //color: $darkGreen;
+//       color: $white;
+
+//       font-size: 7rem;
+//       letter-spacing: 0.05em;
+//       text-shadow: 2px 2px 2px rgba(255, 254, 254, 0.2);
+//       font-weight: 600;
+//       span {
+//         text-decoration: solid underline $darkGreen 5px;
+//       }
+//     }
+//     .heroText {
+//       font-size: 1rem;
+//       letter-spacing: 0.05em;
+//       font-weight: 500;
+//     }
+
+//     .btn {
+//       margin-top: 10px;
+//     }
+//   }
+// }
+
+// // Benefits section
+// .benefits {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+
+//   margin-bottom: 80px;
+//   padding-top: 20px;
+//   .info-box {
+//     flex-basis: 100%;
+
+//     background-color: $white;
+//     border-radius: 8px;
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//     padding: 20px;
+//     margin: 10px;
+//     h3 {
+//       font-size: 1.4rem;
+//       color: $darkGreen;
+//       margin-bottom: 10px;
+//       i {
+//         margin-right: 5px;
+//       }
+//     }
+
+//     p {
+//       color: #666;
+//       line-height: 1.6;
+//     }
+//   }
+
+//   @media (min-width: 768px) {
+//     .info-box {
+//       flex-basis: calc(50% - 20px); // Two boxes per row on medium screens
+//     }
+//   }
+
+//   @media (min-width: 992px) {
+//     .info-box {
+//       flex-basis: calc(33.333% - 20px); // Three boxes per row on large screens
+//     }
+//   }
+// }
+
+
+
+
+      <!-- <section class="hero">
+      <div class="hero-content">
+        <h1>
+          <h1 class="heroHeader"><span>Stromy</span> bez starostí</h1>
+        </h1>
+        <p class="heroText">
+          S našimi stromky zažijete Vánoce plné magie a elegance, která zůstane
+          ve vašem domově navždy. <br />
+        </p>
+
+        <a class="btn" href="#" role="button">Zjistit více ↪</a>
+      </div>
+    </section> -->
