@@ -1,0 +1,56 @@
+@import "variables";
+
+//FAQ
+#faq {
+  padding-top: 20px;
+  margin-bottom: 80px;
+
+  // h3 {
+  //   padding-bottom: 20px;
+  //   //color: $darkRed;
+  //   font-size: 2.2rem;
+  // }
+
+  .accordion-item {
+    border: none;
+    background-color: white;
+    margin-bottom: 2px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+    .accordion-header {
+      button.accordion-button {
+        background-color: $lightGray;
+        color: $darkGreen;
+        font-size: 1.2rem;
+        padding: 15px 20px;
+
+        &:not(.collapsed) {
+          background-color: $darkGreen;
+          color: $white;
+        }
+
+        &::after {
+          content: "";
+          background-image: url("../images/chevron-expand.svg");
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    .accordion-collapse {
+      transition: max-height 0.4s ease-in-out;
+
+      .accordion-body {
+        padding: 20px;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        color: #555;
+      }
+    }
+  }
+}

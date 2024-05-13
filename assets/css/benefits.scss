@@ -1,0 +1,46 @@
+@import "variables";
+
+// Benefits section
+#benefits {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin-bottom: 80px;
+  padding-top: 20px;
+  .info-box {
+    flex-basis: 100%;
+
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    h3 {
+      font-size: 1.4rem;
+      color: $darkGreen;
+      margin-bottom: 10px;
+      i {
+        margin-right: 5px;
+        color: $darkRed;
+      }
+    }
+
+    p {
+      color: #666;
+      line-height: 1.6;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .info-box {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .info-box {
+      flex-basis: calc(33.333% - 20px);
+    }
+  }
+}

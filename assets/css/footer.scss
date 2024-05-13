@@ -1,0 +1,58 @@
+@import "variables";
+// Footer
+
+footer {
+  // background: url("../images/pattern.jpg") center / contain repeat,
+  //   linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+  // background-blend-mode: overlay;
+  background-color: $white;
+  color: $darkGreen;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  .container {
+    padding: 20px;
+  }
+
+  h5 {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li a {
+      color: $darkGreen;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $darkRed;
+      }
+    }
+  }
+
+  .justify-content-space {
+    justify-content: space-between;
+  }
+
+  .text-center {
+    text-align: center;
+    border-top: 1px solid #34495e;
+    padding-top: 10px;
+  }
+
+  .me-2 {
+    margin-right: 8px;
+  }
+
+  .bi {
+    font-size: 1.5rem;
+    color: $darkRed;
+  }
+}

@@ -1,0 +1,43 @@
+@import "variables";
+
+// header and nav
+header {
+  color: $white;
+}
+
+.navbar {
+  background-color: $white;
+  padding: 20px;
+
+  .row {
+    align-items: center;
+  }
+
+  span {
+    display: flex;
+    padding: 20px;
+    color: black;
+
+    align-items: center;
+    h3 {
+      color: black;
+    }
+  }
+}
+
+.navbar-nav {
+  flex-grow: 0.05;
+  justify-content: space-evenly;
+}
+
+nav {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  color: black;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}

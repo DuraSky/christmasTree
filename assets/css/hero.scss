@@ -1,0 +1,107 @@
+@import "variables";
+
+// .jumbotron {
+//   padding: 60px 0;
+//   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+//   background: url("../images/pattern.jpg") center / contain repeat,
+//     linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+//   background-blend-mode: overlay;
+
+//   .heroHeader {
+//     color: $darkGreen;
+//     font-size: 5rem;
+//     letter-spacing: 0.04em;
+//     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+//     font-weight: 800;
+//     padding: 0px;
+//     span {
+//       text-decoration: solid underline $darkRed 5px;
+//     }
+//   }
+
+//   p {
+//     font-size: 1.2rem;
+//     letter-spacing: 0.05em;
+//     font-weight: 500;
+//   }
+// }
+
+// @media (min-width: 1400px) {
+//   .jumbotron {
+//     background: url("../images/branch.png") top right / contain no-repeat,
+//       url("../images/pattern.jpg") center / contain repeat,
+//       linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+//     background-blend-mode: normal, overlay, normal;
+
+//     .content {
+//       align-items: flex-start;
+//     }
+//     h1 {
+//       font-size: 7rem;
+//     }
+//   }
+// }
+
+// @media (min-width: 2000px) {
+//   .jumbotron {
+//     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+//     background: url("../images/whiteBranch.png") top left / contain no-repeat,
+//       url("../images/branch.png") top right / contain no-repeat,
+//       url("../images/pattern.jpg") center / contain repeat,
+//       linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+//     background-blend-mode: normal, normal, overlay, normal;
+
+//     .heroHeader {
+//       font-size: 7rem;
+//     }
+//   }
+// }
+
+#hero {
+  height: 50vh;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    //url("/assets/images/pexels-iriser-1734436.jpg");
+    url("/assets/images/aurelio-arantes-7Dp9pomkCi8-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //color: white;
+  .hero-content {
+    text-align: center;
+    color: $white;
+
+    /* Semi-transparent background for text */
+    padding: 20px;
+    border-radius: 10px;
+    h1 {
+      //color: $darkGreen;
+      color: $white;
+
+      font-size: 7rem;
+      letter-spacing: 0.05em;
+      text-shadow: 2px 2px 2px rgba(255, 254, 254, 0.2);
+      font-weight: 600;
+      span {
+        text-decoration: solid underline $darkGreen 5px;
+      }
+    }
+    p {
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+
+    .btn {
+      margin-top: 10px;
+    }
+  }
+}

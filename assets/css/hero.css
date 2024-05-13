@@ -1,0 +1,36 @@
+#hero {
+  height: 50vh;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/images/aurelio-arantes-7Dp9pomkCi8-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hero .hero-content {
+  text-align: center;
+  color: #faf8f8;
+  /* Semi-transparent background for text */
+  padding: 20px;
+  border-radius: 10px;
+}
+#hero .hero-content h1 {
+  color: #faf8f8;
+  font-size: 7rem;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 2px rgba(255, 254, 254, 0.2);
+  font-weight: 600;
+}
+#hero .hero-content h1 span {
+  -webkit-text-decoration: solid underline #0f8a5f 5px;
+          text-decoration: solid underline #0f8a5f 5px;
+}
+#hero .hero-content p {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+#hero .hero-content .btn {
+  margin-top: 10px;
+}/*# sourceMappingURL=hero.css.map */

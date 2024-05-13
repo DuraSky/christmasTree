@@ -3,35 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sancreek&display=swap"
-      rel="stylesheet"
-    />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sancreek&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
     />
 
@@ -55,12 +34,7 @@
         <div class="container-fluid">
           <!-- navbar brand / title -->
           <a class="navbar-brand" href="#intro">
-            <img
-              src="/assets/images/zanapoLogo.svg"
-              width="150px"
-              alt=""
-              srcset=""
-            />
+            <img src="/assets/images/zanapoLogo.svg" width="150px" alt="logo" />
           </a>
 
           <!-- toggle button for mobile nav -->
@@ -83,28 +57,28 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#features"
+                <a class="nav-link" href="#hero"
                   ><i class="bi bi-tree-fill"></i> Domů</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#shop"
+                <a class="nav-link" href="#products"
                   ><i class="bi bi-cart-check-fill"></i> Produkty</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#faqAccordion"
+                <a class="nav-link" href="#benefits"
+                  ><i class="bi bi-tree-fill"></i> Benefity</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq"
                   ><i class="bi bi-question-circle-fill"></i> FAQ</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact"
+                <a class="nav-link" href="#sestaveni"
                   ><i class="bi bi-gift-fill"></i> Sestavení</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact"
-                  ><i class="bi bi-telephone-fill"></i> Kontakt</a
                 >
               </li>
             </ul>
@@ -113,16 +87,15 @@
       </nav>
     </header>
 
-    <section class="hero">
+    <!-- <section class="hero">
       <div class="jumbotron">
         <div class="container">
-          <!-- Content on the left -->
           <div class="content">
             <div class="text-block text-center">
               <h1 class="heroHeader"><span>Stromy</span> bez starostí</h1>
               <p class="heroText">
                 S našimi stromky zažijete Vánoce plné magie a elegance, která
-                zůstane ve vašem domově navždy. <br />
+                zůstane ve vašem domově navždy. 
               </p>
             </div>
             <div class="test text-center">
@@ -131,13 +104,32 @@
           </div>
         </div>
       </div>
+    </section> -->
+
+    <section id="hero">
+      <div class="hero-content">
+        <h1>
+          <span>Stromy</span>
+          bez starostí
+        </h1>
+        <p>
+          S našimi stromky zažijete Vánoce plné magie a elegance, která zůstane
+          ve vašem domově navždy.
+        </p>
+
+        <a class="btn" href="#" role="button">Zjistit více ↪</a>
+      </div>
     </section>
 
-    <section class="products">
-      <h1 class="text-center">Výběr stromů</h1>
+    <section id="products">
+      <h2>Výběr stromů</h2>
       <div class="container">
         <div class="product">
-          <img src="/assets/images/tree1.png" class="img-fluid" alt="Tree 1" />
+          <img
+            src="/assets/images/tree1.png"
+            class="img-fluid"
+            alt="Obrazek produktu"
+          />
           <div class="text">
             <h3>Smrk Bergamo 3D diamond</h3>
             <p>
@@ -159,11 +151,15 @@
               <p><i class="bi bi-arrows-expand"></i>Vyska: 185 cm</p>
             </div>
 
-            <button>Lorem</button>
+            <button>Kup teď</button>
           </div>
         </div>
         <div class="product">
-          <img src="/assets/images/tree2.webp" class="img-fluid" alt="Tree 2" />
+          <img
+            src="/assets/images/tree2.webp"
+            class="img-fluid"
+            alt="Obrazek produktu"
+          />
           <div class="text">
             <h3>Jedle 3D classic</h3>
             <p>
@@ -186,14 +182,14 @@
               <p><i class="bi bi-arrows-expand"></i>Vyska: 185 cm</p>
             </div>
 
-            <button>Lorem</button>
+            <button>Kup teď</button>
           </div>
         </div>
         <div class="product">
           <img
             src="/assets/images/tree3-transformed.webp"
             class="img-fluid"
-            alt="Tree 3"
+            alt="Obrazek produktu"
           />
           <div class="text">
             <h3>Jedle Gordon natural 3D</h3>
@@ -217,14 +213,14 @@
               <p><i class="bi bi-arrows-expand"></i>Vyska: 185 cm</p>
             </div>
 
-            <button>Lorem</button>
+            <button>Kup teď</button>
           </div>
         </div>
         <div class="product">
           <img
             src="/assets/images/tree4-transformed.webp"
             class="img-fluid"
-            alt="Tree 4"
+            alt="Obrazek produktu"
           />
           <div class="text">
             <h3>Borovice Lamia 3D</h3>
@@ -248,14 +244,14 @@
               <p><i class="bi bi-arrows-expand"></i>Vyska: 185 cm</p>
             </div>
 
-            <button>Lorem</button>
+            <button>Kup teď</button>
           </div>
         </div>
         <div class="product">
           <img
             src="/assets/images/tree5-transformed.webp"
             class="img-fluid"
-            alt="Tree 5"
+            alt="Obrazek produktu"
           />
           <div class="text">
             <h3>Smrk Bergamo 3D classic</h3>
@@ -279,11 +275,15 @@
               <p><i class="bi bi-arrows-expand"></i>Vyska: 185 cm</p>
             </div>
 
-            <button>Lorem</button>
+            <button>Kup teď</button>
           </div>
         </div>
         <div class="product">
-          <img src="/assets/images/tree2.webp" class="img-fluid" alt="Tree 2" />
+          <img
+            src="/assets/images/tree2.webp"
+            class="img-fluid"
+            alt="Obrazek produktu"
+          />
           <div class="text">
             <h3>Jedle 3D classic</h3>
             <p>
@@ -306,16 +306,16 @@
               <p><i class="bi bi-arrows-expand"></i>Vyska: 185 cm</p>
             </div>
 
-            <button>Lorem</button>
+            <button>Kup teď</button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- benefity -->
-    <section class="benefits">
+    <section id="benefits">
       <div class="container">
-        <h1 class="text-center">Benefity našich stromů</h1>
+        <h2>Benefity našich stromů</h2>
         <div class="row">
           <div class="col-lg-4">
             <!-- Left Column Boxes -->
@@ -374,16 +374,27 @@
       </div>
     </section>
 
+    <!-- Client satisfaction -->
+    <!-- <section class="client">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-lg-3">
+            <img src="/assets/images/" alt="" srcset="" />
+          </div>
+        </div>
+      </div>
+    </section> -->
+
     <!-- FAQ -->
-    <div class="container faq">
+    <div class="container" id="faq">
       <div class="row justify-content-center">
         <!-- FAQ Column, occupies 8 columns in medium and larger, centered -->
         <div class="col-12 col-md-8">
-          <h1 class="text-center">Často kladené otázky</h1>
+          <h2>Často kladené otázky</h2>
           <div class="accordion shadow" id="faqAccordion">
             <!-- Accordion items... -->
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
+              <h3 class="accordion-header" id="headingThree">
                 <button
                   class="accordion-button"
                   type="button"
@@ -394,7 +405,7 @@
                 >
                   Jak dlouho vydrží umělý strom?
                 </button>
-              </h2>
+              </h3>
               <div
                 id="collapseThree"
                 class="accordion-collapse collapse show"
@@ -409,7 +420,7 @@
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
+              <h3 class="accordion-header" id="headingFour">
                 <button
                   class="accordion-button collapsed"
                   type="button"
@@ -420,7 +431,7 @@
                 >
                   Jak se starat o umělý vánoční strom?
                 </button>
-              </h2>
+              </h3>
               <div
                 id="collapseFour"
                 class="accordion-collapse collapse"
@@ -436,7 +447,7 @@
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
+              <h3 class="accordion-header" id="headingFive">
                 <button
                   class="accordion-button collapsed"
                   type="button"
@@ -447,7 +458,7 @@
                 >
                   Jaké jsou výhody umělých vánočních stromků?
                 </button>
-              </h2>
+              </h3>
               <div
                 id="collapseFive"
                 class="accordion-collapse collapse"
@@ -463,7 +474,7 @@
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSix">
+              <h3 class="accordion-header" id="headingSix">
                 <button
                   class="accordion-button collapsed"
                   type="button"
@@ -474,7 +485,7 @@
                 >
                   Poskytujete záruku na vánoční stromky?
                 </button>
-              </h2>
+              </h3>
               <div
                 id="collapseSix"
                 class="accordion-collapse collapse"
@@ -488,7 +499,7 @@
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSeven">
+              <h3 class="accordion-header" id="headingSeven">
                 <button
                   class="accordion-button collapsed"
                   type="button"
@@ -499,7 +510,7 @@
                 >
                   Mohou být umělé stromy použity venku?
                 </button>
-              </h2>
+              </h3>
               <div
                 id="collapseSeven"
                 class="accordion-collapse collapse"
@@ -520,63 +531,67 @@
     </div>
 
     <!-- sestaveni -->
-    <section class="sestaveni">
+    <section id="sestaveni">
       <div class="container-fluid text-center sestaveni">
-        <h1>Jednoduché sestavení stromečku</h1>
+        <h2>Jednoduché sestavení stromečku</h2>
 
         <div class="row">
           <div class="col-12 col-lg-3">
-            <!-- <img
-            src="/assets/images/step1.png"
-              alt=""
-              class="img-fluid sestaveniImg"
-            /> -->
-            <img src="/assets/images/placeholder.webp" alt="" srcset="" />
+            <img src="/assets/images/placeholder.webp" alt="Krok sestaveni" />
             <p>1. Vybaleni z krabice</p>
           </div>
           <div class="col-12 col-lg-3">
-            <!-- <img
-              src="/assets/images/step2.png"
-              alt=""
-              class="img-fluid sestaveniImg"
-            /> -->
-            <img src="/assets/images/placeholder.webp" alt="" srcset="" />
+            <img src="/assets/images/placeholder.webp" alt="Krok sestaveni" />
 
             <p>2. Vlozeni stromecku do stojanu</p>
           </div>
           <div class="col-12 col-lg-3">
-            <!-- <img
-              src="/assets/images/step3.png"
-              alt=""
-              class="img-fluid sestaveniImg"
-            /> -->
-            <img src="/assets/images/placeholder.webp" alt="" srcset="" />
+            <img src="/assets/images/placeholder.webp" alt="Krok sestaveni" />
 
             <p>3. Rozkladani vetvicek</p>
           </div>
           <div class="col-12 col-lg-3">
-            <!-- <img
-              src="/assets/images/step4.png"
-              alt=""
-              class="img-fluid sestaveniImg"
-            /> -->
-            <img src="/assets/images/placeholder.webp" alt="" srcset="" />
+            <img src="/assets/images/placeholder.webp" alt="Krok sestaveni" />
 
             <p>4. Hotovo</p>
           </div>
         </div>
       </div>
     </section>
+    <!-- <section class="sestaveni">
+      <div class="container text-center">
+        <div class="row">
+          <div class="step1">
+            <img src="/assets/images/placeholder.webp" alt="" srcset="" />
+            <p>Step 1</p>
+          </div>
+          <div class="step1">
+            <img src="/assets/images/placeholder.webp" alt="" srcset="" />
+            <p>Step 2</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="step1">
+            <img src="/assets/images/placeholder.webp" alt="" srcset="" />
+            <p>Step 3</p>
+          </div>
+          <div class="step1">
+            <img src="/assets/images/placeholder.webp" alt="" srcset="" />
+            <p>Step 4</p>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
     <!-- CTA -->
     <section class="cta">
       <div class="container text-center">
         <div class="row">
           <div class="col-12">
-            <h1 class="mb-3">Nečekejte do Vánoc, objednejte si hned!</h1>
+            <h2 class="mb-3">Nečekejte do Vánoc, objednejte si hned!</h2>
           </div>
           <div class="col-12">
-            <p class="lead">
+            <p>
               Vyhněte se stresům. Užijte si krásu a pohodlí našich Vánočních
               stromků s rychlým doručením a bezstarostnou instalací.
             </p>
