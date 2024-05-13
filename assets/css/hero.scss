@@ -1,175 +1,118 @@
-@import "variables";
-
-// .jumbotron {
-//   padding: 60px 0;
-//   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
-//   background: url("../images/pattern.jpg") center / contain repeat,
-//     linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
-//   background-blend-mode: overlay;
-
-//   .heroHeader {
-//     color: $darkGreen;
-//     font-size: 5rem;
-//     letter-spacing: 0.04em;
-//     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
-//     font-weight: 800;
-//     padding: 0px;
-//     span {
-//       text-decoration: solid underline $darkRed 5px;
-//     }
-//   }
-
-//   p {
-//     font-size: 1.2rem;
-//     letter-spacing: 0.05em;
-//     font-weight: 500;
-//   }
-// }
-
-// @media (min-width: 1400px) {
-//   .jumbotron {
-//     background: url("../images/branch.png") top right / contain no-repeat,
-//       url("../images/pattern.jpg") center / contain repeat,
-//       linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
-//     background-blend-mode: normal, overlay, normal;
-
-//     .content {
-//       align-items: flex-start;
-//     }
-//     h1 {
-//       font-size: 7rem;
-//     }
-//   }
-// }
-
-// @media (min-width: 2000px) {
-//   .jumbotron {
-//     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
-//     background: url("../images/whiteBranch.png") top left / contain no-repeat,
-//       url("../images/branch.png") top right / contain no-repeat,
-//       url("../images/pattern.jpg") center / contain repeat,
-//       linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
-//     background-blend-mode: normal, normal, overlay, normal;
-
-//     .heroHeader {
-//       font-size: 7rem;
-//     }
-//   }
-// }
-
-// #hero {
-//   height: 50vh;
-//   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-//   background-image: linear-gradient(
-//       to bottom,
-//       rgba(0, 0, 0, 0.4),
-//       rgba(0, 0, 0, 0.4)
-//     ),
-//     url("/assets/images/aurelio-arantes-7Dp9pomkCi8-unsplash.jpg");
-//   background-size: cover;
-//   background-position: center;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   .hero-content {
-//     text-align: center;
-//     color: $white;
-
-//     padding: 20px;
-//     border-radius: 10px;
-// h1 {
-//   color: $white;
-
-//   font-size: 7rem;
-// letter-spacing: 0.05em;
-// text-shadow: 2px 2px 2px rgba(255, 254, 254, 0.2);
-// font-weight: 600;
-//       span {
-//         text-decoration: solid underline $darkGreen 5px;
-//       }
-//     }
-//     p {
-//       font-size: 1.1rem;
-//       letter-spacing: 0.05em;
-//       font-weight: 500;
-//     }
-
-//     .btn {
-//       margin-top: 10px;
-//     }
-//   }
-// }
-
 #hero {
-  padding: 80px;
+  padding: 80px 20px; // Reduced horizontal padding for smaller screens
   .container-fluid {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    position: relative;
 
     .left {
       display: flex;
       flex-grow: 1;
-      justify-content: space-around;
-      h1 {
-        //color: $white;
+      flex-direction: column; // Ensures vertical alignment of children
+      justify-content: center;
+      align-items: center;
+      padding: 0 15px; // Provides padding for smaller screens
 
+      h1 {
         font-size: 5rem;
         letter-spacing: 0.05em;
         text-shadow: 2px 2px 2px rgba(255, 254, 254, 0.2);
         font-weight: 600;
+        margin: 0 0 20px; // Adds bottom margin
       }
 
+      p {
+        font-size: 1.25rem; // Ensures readable font size
+      }
+
+      .btn {
+        padding: 10px 20px; // Larger touch targets for mobile
+        //font-size: 1.2rem; // Larger font size for readability
+      }
+    }
+
+    .right {
+      position: relative;
+      img {
+        border-radius: 43% 57% 47% 53% / 62% 31% 69% 38%;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.233);
+        opacity: 0.8;
+        width: 800px;
+        height: auto;
+        z-index: 1;
+        padding: 10px;
+      }
+      .rating,
       .countdown {
-        .values {
-          display: flex;
-        }
-      }
-
-      .rating {
-        /* From https://css.glass */
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.07);
+        position: absolute;
+        width: 300px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.5);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.3);
-
-        width: 400px;
+        z-index: 2;
       }
-    }
 
-    .right {
-      img {
-        border-radius: 43% 57% 47% 53% / 62% 31% 69% 38%;
-        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.233);
-        opacity: 0.8;
-        animation: morph 10s linear infinite;
-        //margin: 10px;
-        padding: 10px;
+      .rating {
+        top: 10%;
+        right: 70%; // Initial positioning
+      }
 
-        //border: solid 10px;
-        border-collapse: collapse;
-        border-spacing: 20px;
-        //border: 5px solid $darkGreen;
+      .countdown {
+        top: 70%;
+        .values {
+          display: flex;
+        }
       }
     }
   }
-}
 
-@keyframes morph {
-  0%,
-  100% {
-    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+  // Responsive adjustments
+  @media (max-width: 1200px) {
+    .container-fluid {
+      flex-direction: column;
+      align-items: center;
+      .left,
+      .right {
+        order: 1;
+        width: 100%; // Full width for better use of space
+        padding: 0;
+      }
+      .right img {
+        width: 90%; // Full width images on smaller screens
+      }
+
+      .rating,
+      .countdown {
+        right: 50%; // Centralize more over the image
+        transform: translateX(
+          50%
+        ); // Adjust to exactly center the element over the image
+      }
+    }
+
+    .left h1 {
+      font-size: 4rem; // Slightly smaller to fit medium screens
+    }
   }
-  34% {
-    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
-  }
-  67% {
-    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+
+  @media (max-width: 768px) {
+    // Small devices like phones
+    .container-fluid {
+      .right {
+        display: none; // Hide the right div
+      }
+    }
+    .left h1 {
+      font-size: 3rem; // Even smaller font for small screens
+    }
+    .left p,
+    .left .btn {
+      font-size: 1rem; // Adjusts font size for better readability
+    }
   }
 }
