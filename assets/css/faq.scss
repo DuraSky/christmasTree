@@ -25,11 +25,6 @@
         font-size: 1.2rem;
         padding: 15px 20px;
 
-        &:not(.collapsed) {
-          background-color: $darkGreen;
-          color: $white;
-        }
-
         &::after {
           content: "";
           background-image: url("../images/chevron-expand.svg");

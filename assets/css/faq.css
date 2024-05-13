@@ -15,10 +15,6 @@
   font-size: 1.2rem;
   padding: 15px 20px;
 }
-#faq .accordion-item .accordion-header button.accordion-button:not(.collapsed) {
-  background-color: #0f8a5f;
-  color: #faf8f8;
-}
 #faq .accordion-item .accordion-header button.accordion-button::after {
   content: "";
   background-image: url("../images/chevron-expand.svg");
